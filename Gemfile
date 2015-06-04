@@ -9,8 +9,9 @@ gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 
 gem 'jquery-rails'
-# gem 'turbolinks'
-# gem 'nprogress-rails' # progressbar for turbolinks
+gem 'turbolinks'
+gem 'nprogress-rails' # progressbar for turbolinks
+gem 'jquery-turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
@@ -49,6 +50,14 @@ group :production do
   gem 'utf8-cleaner'
 end
 
+gem 'compass-rails', github: 'Compass/compass-rails', branch: 'master'
+gem 'redactor-rails'
+gem 'bootstrap-sass', '~> 3.3.4'
+gem 'autoprefixer-rails' # css prefixer
+gem 'mini_magick' # image processing
+gem 'carrierwave' # file upload
+
+
 gem 'puma'
 gem 'activeuuid'      # uuid for AR
 
@@ -60,3 +69,4 @@ gem 'little_decorator' # decorator for models
 gem 'kaminari' # pagination
 gem 'rails_config' # Keep configurations clean
 gem 'devise'
+gem 'russian'

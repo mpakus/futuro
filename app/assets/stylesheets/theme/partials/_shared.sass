@@ -1,0 +1,82 @@
+.writer-icon,
+.side-writer-icon
+    z-index: 1080
+    position: absolute
+    display: block
+    height: 40px
+    width: 40px
+    background: #333
+    padding-top: 8px
+
+    &:hover
+        pointer: cursor
+
+    span
+        height: 5px
+        width: 28px
+        float: left
+        display: block
+        margin: 0 6px 5px
+        background: #fff
+
+.writer-icon
+    top: 15px
+    left: 15px
+
+.menu-dashboard
+    top: 15px
+    left: 15px
+
+.meta
+    color: $light-grey
+    +font-size(14)
+
+    +breakpoint(md)
+        +font-size(16)
+
+    a
+        color: $light-grey
+
+        &:hover
+            color: $text-color
+            border-bottom: 1px solid $light-grey
+
+    i
+        font-style: normal
+
+.btn-writer
+    padding: 10px 15px
+    background: #fafafa
+    border-bottom: 1px solid rgba(0,0,0,0.1)
+    text-shadow: 0 0 0
+    +border-radius(4px)
+
+.btn-post
+    background: #4761e2
+    color: #fff
+    font-family: $sans
+
+    &:hover
+        background-color: #2F49CA
+        color: #fff
+
+    &:active
+        background-color: #2B43BD
+
+.btn-like
+    padding: 13px 24px
+    background: #E24747
+    color: #fff
+    font-family: $sans
+    margin-right: 20px
+
+    &:hover
+        background-color: #DD3737
+        color: #fff
+    &:active
+        background-color: #D62929
+
+.entypo-heart,
+.entypo-doc-text
+    font-style: normal
+    margin-right: 10px

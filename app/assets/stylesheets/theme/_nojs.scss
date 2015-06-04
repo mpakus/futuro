@@ -1,0 +1,82 @@
+.no-js-menu {
+  ul {
+    padding: 10px 0;
+    margin-bottom: 0;
+}
+  li {
+    margin: 0;
+    padding: 3px 0;
+    list-style: none;
+    @include breakpoint(sm) {
+      padding: 5px 0;
+  }
+
+    @include breakpoint(md) {
+      padding: 10px 0;
+  }
+
+    i {
+      padding: 0 20px;
+      color: #dadada;
+      font-style: normal;
+      @include font-size(14);
+  }
+    a {
+      color: #dadada;
+      font-family: $sans;
+      font-weight: 700;
+      border-bottom: 0 transparent;
+      @include font-size(12);
+      &:hover {
+        border-bottom: none;
+        color: white;
+    }
+  }
+}
+}
+
+.hero-image {
+  .no-js-menu {
+    padding-left: 50px;
+}
+}
+
+.no-js {
+  .sidebar {
+    height: 400px;
+    @include breakpoint(sm) {
+      height: 450px;
+  }
+
+    @include breakpoint(md) {
+      width: 400px;
+      height: 100%;
+      position: fixed;
+      background-color: whitesmoke;
+  }
+
+    @include breakpoint(lg) {
+      width: 464px;
+  }
+}
+  .site-info {
+    padding: 0 15px 0 15px;
+    @include breakpoint(sm) {
+      padding: 0 100px 0 100px;
+  }
+
+    @include breakpoint(md) {
+      padding: 0 20px;
+      position: absolute;
+      bottom: 40px;
+  }
+
+    @include breakpoint(lg) {
+      padding: 0 30px;
+  }
+}
+}
+
+.no-js-dashboard {
+  margin-top: 60px;
+}

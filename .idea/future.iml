@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="RUBY_MODULE" version="4">
+  <component name="CompassSettings">
+    <option name="compassExecutableFilePath" value="$USER_HOME$/.rvm/gems/ruby-2.2.2@future/gems/compass-1.0.3/bin/compass" />
+    <option name="compassSupportEnabled" value="true" />
+    <option name="importPaths">
+      <list>
+        <option value="$USER_HOME$/.rvm/gems/ruby-2.2.2@future/gems/compass-core-1.0.3/stylesheets" />
+      </list>
+    </option>
+  </component>
   <component name="FacetManager">
     <facet type="RailsFacetType" name="Ruby on Rails">
       <configuration>
@@ -121,9 +130,136 @@
       <excludeFolder url="file://$MODULE_DIR$/public/system" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="RVM: ruby-2.2.2 [future]" jdkType="RUBY_SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.6.2, RVM: ruby-2.1.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="aasm (v4.1.1, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="actionmailer (v4.2.1, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="actionpack (v4.2.1, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="actionview (v4.2.1, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="activejob (v4.2.1, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="activemodel (v4.2.1, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="activerecord (v4.2.1, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="activesupport (v4.2.1, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="activeuuid (v0.6.0, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="addressable (v2.3.8, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="arel (v6.0.0, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="ast (v2.0.0, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="astrolabe (v1.3.0, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="autoprefixer-rails (v5.2.0, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="awesome_print (v1.6.1, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bcrypt (v3.1.10, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="better_errors (v2.1.1, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="binding_of_caller (v0.7.2, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bootstrap-sass (v3.3.4.1, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="builder (v3.2.2, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bullet (v4.14.7, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.9.6, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="byebug (v5.0.0, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="callsite (v0.0.11, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="capybara (v2.4.4, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="capybara-screenshot (v1.0.9, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="carrierwave (v0.10.0, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="chunky_png (v1.3.4, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="cliver (v0.3.2, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="coderay (v1.1.0, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="coffee-rails (v4.1.0, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="coffee-script (v2.4.1, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="coffee-script-source (v1.9.1.1, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="columnize (v0.9.0, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="compass (v1.0.3, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="compass-core (v1.0.3, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="compass-import-once (v1.0.5, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="compass-rails (v2.0.4@3e88f9, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="daemons (v1.2.2, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="database_cleaner (v1.4.1, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="debug_inspector (v0.0.2, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="devise (v3.5.1, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.2.5, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="erubis (v2.7.0, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="eventmachine (v1.0.5, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="execjs (v2.5.2, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="factory_girl (v4.5.0, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="factory_girl_rails (v4.5.0, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="faker (v1.4.3, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="ffi (v1.9.8, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="globalid (v0.3.5, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="hike (v1.2.3, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="i18n (v0.7.0, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="jbuilder (v2.2.16, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="jquery-rails (v4.0.3, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="jquery-turbolinks (v2.1.0, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="json (v1.8.3, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="kaminari (v0.16.3, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="launchy (v2.4.3, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="little_decorator (v0.0.6, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="local_time (v1.0.2, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="loofah (v2.0.2, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mail (v2.6.3, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mailcatcher (v0.6.1, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="meta_request (v0.3.4, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mime-types (v2.6.1, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mini_magick (v4.2.7, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mini_portile (v0.6.2, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="minitest (v5.7.0, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.11.0, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mysql2 (v0.3.18, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.6.6.2, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="nprogress-rails (v0.1.6.7, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="orm_adapter (v0.5.0, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="paranoia (v2.1.2, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="parser (v2.2.2.5, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="poltergeist (v1.6.0, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="powerpack (v0.1.1, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="puma (v2.11.3, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="quiet_assets (v1.1.0, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rack (v1.6.1, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rack-contrib (v1.2.0, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rack-protection (v1.5.3, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rack-test (v0.6.3, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rails (v4.2.1, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rails-deprecated_sanitizer (v1.0.3, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rails-dom-testing (v1.0.6, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rails-html-sanitizer (v1.0.2, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rails_config (v0.4.2, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="railties (v4.2.1, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rainbow (v2.0.0, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rb-fsevent (v0.9.5, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rb-inotify (v0.9.5, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="redactor-rails (v0.5.0, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="responders (v2.1.0, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-core (v3.2.3, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-expectations (v3.2.1, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-mocks (v3.2.1, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-rails (v3.2.2, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-support (v3.2.2, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rubocop (v0.31.0, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="ruby-progressbar (v1.7.5, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="russian (v0.6.0, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="sass (v3.4.14, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="sass-rails (v5.0.3, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="sdoc (v0.4.1, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="sextant (v0.2.4, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="sinatra (v1.4.6, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="skinny (v0.2.3, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="spring (v1.3.6, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="sprockets (v2.12.3, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="sprockets-rails (v2.3.1, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="sqlite3 (v1.3.10, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="thin (v1.5.1, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="thor (v0.19.1, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="thread_safe (v0.3.5, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="tilt (v1.4.1, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="turbolinks (v2.5.3, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="tzinfo (v1.2.2, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="uglifier (v2.7.1, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="uniform_notifier (v1.9.0, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="utf8-cleaner (v0.0.9, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="uuidtools (v2.1.5, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="warden (v1.2.3, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="web-console (v2.1.2, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="websocket-driver (v0.5.4, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="websocket-extensions (v0.1.2, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="xpath (v2.0.0, RVM: ruby-2.2.2 [future]) [gem]" level="application" />
   </component>
   <component name="RModuleSettingsStorage">
     <LOAD_PATH number="0" />

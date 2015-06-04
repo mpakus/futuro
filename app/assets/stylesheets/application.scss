@@ -1,0 +1,9 @@
+//= require theme/main
+//= require_self
+
+$nprogress-color: #67307E;
+$nprogress-height: 5px;
+$nprogress-zindex: 10100;
+
+@import 'nprogress';
+@import 'nprogress-bootstrap';

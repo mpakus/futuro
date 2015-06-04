@@ -1,0 +1,126 @@
+.hero-image
+    height: 150px
+    width: 100%
+    background: url(../img/default-cover.jpg) center center no-repeat
+    +background-size(cover)
+
+    +breakpoint(sm)
+        height: 300px
+    +breakpoint(md)
+        height: 390px
+    +breakpoint(lg)
+        height: 460px
+
+.meta
+    +font-size(12)
+    margin-bottom: 0
+
+    +breakpoint(sm)
+        +font-size(16)
+
+
+.subtitle
+    margin: 5px auto 20px auto
+    +font-size(20)
+    font-style: italic
+
+    +breakpoint(sm)
+        +font-size(24)
+
+hr
+    display: block
+    width: 20%
+    margin: 50px auto 40px auto
+    border: 1px solid #dededc
+
+blockquote
+    +font-size(16)
+
+.pullquote
+    text-align: center
+    +line-height(28)
+    +font-size(24)
+    margin: 50px -5%
+
+.single-content
+    padding: 30px 8%
+
+    +breakpoint(md)
+        padding: 30px 14%
+    +breakpoint(lg)
+        padding: 30px 18%
+
+    h1
+        letter-spacing: -1pt
+
+        +breakpoint(sm)
+            +font-size(44)
+    h2
+        +font-size(28)
+
+.single-footer
+    padding: 40px 0
+
+    .liked-this-icon
+        height: 40px
+        width: 40px
+        margin: 0 3px
+        +border-radius(100%)
+
+    .social-icon
+        border: 0 transparent
+        margin: 20px 0 0 10px
+        display: inline-block
+        float: right
+        color: #ccc
+        +font-size(24)
+
+        i
+            font-style: normal
+
+        +breakpoint(sm)
+            margin: 0 0 0 10px
+
+    .category-list
+        margin: 40px 0
+
+        p
+            display: inline
+            font-family: $sans
+            +font-size(16)
+
+        ul
+            padding: 0
+            display: inline
+
+            li
+                margin: 0 3px
+                display: inline
+
+        a
+            border: 0 transparent
+            color: $base-color
+
+.hero-a-great-story
+    background: url(../img/a-great-story-cover.jpg) center center no-repeat
+    +background-size(cover)
+
+.hero-about
+    background: url(../img/about-cover.jpg) center center no-repeat
+    +background-size(cover)
+
+.hero-features
+    background: url(../img/features-cover.jpg) center center no-repeat
+    +background-size(cover)
+
+.hero-hacking
+    background: url(../img/hacking-cover.jpg) center center no-repeat
+    +background-size(cover)
+
+.hero-its-not-always
+    background: url(../img/its-not-always-cover.jpg) center center no-repeat
+    +background-size(cover)
+
+.hero-ten-reasons
+    background: url(../img/ten-reasons-cover.jpg) center center no-repeat
+    +background-size(cover)

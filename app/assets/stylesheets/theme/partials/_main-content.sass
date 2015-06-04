@@ -1,0 +1,102 @@
+.main-content
+	padding: 30px
+
+	+breakpoint(sm)
+		padding: 60px 120px
+	+breakpoint(md)
+		padding: 50px
+
+.nav
+	height: 30px
+	border-bottom: solid 1px #f5f5f5
+
+	a
+		padding: 0 0 10px 0
+		margin-right: 10px
+		font-family: $sans
+		color: $light-grey
+		text-transform: uppercase
+		font-weight: 700
+		letter-spacing: 2pt
+		+font-size(12)
+
+		&:hover
+			color: $text-color
+
+	.active
+		border-bottom: solid 1px #000
+		color: $text-color
+
+.post
+	height: auto
+	padding: 30px 0
+	border-bottom: solid 1px #f5f5f5
+	+clearfix()
+
+	.post-preview
+
+		h2
+			margin-top: 0
+			+font-size(24)
+
+			+breakpoint(md)
+				+font-size(32)
+
+			a
+				color: #333337
+				border: solid 0px transparent
+
+				&:hover
+					color: $light-grey
+		p
+			font-family: $serif
+			+font-size(16)
+
+			+breakpoint(md)
+				+font-size(18)
+	img
+		width: 50px
+		height: 50px
+
+	.user-icon
+		padding: 0
+		float: right
+		+border-radius(100%)
+
+.link-spacer
+	margin: 0 2px 4px 2px
+	display: inline-block
+	height: 2px
+	width: 2px
+	background-color: $light-grey
+	+border-radius(100%)
+
+.category
+	margin-top: 15px
+	margin-bottom: 15px
+
+.category-preview
+	margin: 15px 0
+
+	h2
+		margin: 0
+		padding: 10px
+		position: absolute
+		bottom: 0
+		+font-size(20)
+		color: #fff
+
+	img
+		max-width: 100%
+
+.home-footer
+	padding: 10px 0
+
+	a
+		color: #999
+		border-bottom: 0 transparent
+
+		&:hover
+			color: #333
+			border-bottom: 0 transparent
+
