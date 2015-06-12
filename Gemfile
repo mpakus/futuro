@@ -69,4 +69,5 @@ gem 'little_decorator' # decorator for models
 gem 'kaminari' # pagination
 gem 'rails_config' # Keep configurations clean
 gem 'devise'
+gem 'devise-bootstrap-views'
 gem 'russian'

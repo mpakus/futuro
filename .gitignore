@@ -13,3 +13,6 @@
 /tmp
 .idea
 /public/uploads
+workspace.xml
+.rakeTasks
+.generators
