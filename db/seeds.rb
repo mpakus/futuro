@@ -7,3 +7,12 @@ u = User.create({
                 uri:  'mpak'
             })
 u.confirm
+
+Blog.destroy_all
+
+Blog.create({
+                name:        'MpaKus Dominion',
+                description: 'обитель',
+                owner:       u,
+                variant:     :personal
+            })

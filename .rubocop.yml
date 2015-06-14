@@ -41,3 +41,4 @@ AllCops:
     - Guardfile
     - test/**/*
     - public/**/*
+    - spec/support/*
