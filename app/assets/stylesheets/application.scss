@@ -1,8 +1,9 @@
 //= require theme/main
 //= require devise_bootstrap_views
+//= require nprogress
 //= require_self
 
-$nprogress-color: #67307E;
+$nprogress-color: #666;
 $nprogress-height: 5px;
 $nprogress-zindex: 10100;
 

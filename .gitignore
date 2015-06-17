@@ -11,7 +11,8 @@
 /log/*
 !/log/.keep
 /tmp
-.idea
+.idea/
+.idea/*
 /public/uploads
 workspace.xml
 .rakeTasks

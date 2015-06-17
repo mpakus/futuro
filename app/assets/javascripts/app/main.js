@@ -2,26 +2,7 @@ var jPM = {};
 
 $(function() {
 
-    jPM = $.jPanelMenu({
 
-        menu : '#menu',
-        trigge : '.menu-trigger',
-        animated: false,
-        beforeOpen : ( function() {
-
-            if (matchMedia('only screen and (min-width: 992px)').matches) {
-                $('.sidebar').css("left", "250px");
-            }
-
-        }),
-        beforeClose : ( function() {
-
-            $('.sidebar').css("left", "0");
-            $('.writer-icon, .side-writer-icon').removeClass("fadeOutUp");
-        })
-    });
-
-    jPM.on();
 
     $('.select-posts, .select-categories').on('click', function () {
 
@@ -38,7 +19,7 @@ $(function() {
         $(this).addClass("fadeOutUp");
 
     });
-
+/*
     var graphData = [{
         // Visits
         data: [ [11, 540], [12, 600], [13,645], [14, 672], [15, 591], [16, 789], [17, 794], [18, 732], [19, 600],[20, 520], [21, 500] ],
@@ -120,7 +101,7 @@ $(function() {
             $(this).addClass('active');
             $('#graph-bars').fadeIn().removeClass('hidden');
             e.preventDefault();
-        });
+        });*/
 
         function showTooltip(x, y, contents) {
             $('<div id="tooltip">' + contents + '</div>').css({
@@ -128,7 +109,7 @@ $(function() {
                 left: x + 20
             }).appendTo('.container').fadeIn();
         }
-
+/*
         var previousPoint = null;
 
         $('#graph-lines, #graph-bars').bind('plothover', function (event, pos, item) {
@@ -163,9 +144,7 @@ $(function() {
         });
 
     }//end check if graph exists
+ */
 
-    var fullHeight = $(window).height();
-
-    $('.hero-image-404').css("height", fullHeight );
 
 });
