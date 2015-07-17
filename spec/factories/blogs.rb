@@ -5,7 +5,7 @@ FactoryGirl.define do
     description { Faker::Lorem.sentence(15) }
     image ''
     settings ''
-    owner       { create(:user) }
+    owner { create(:user) }
     variant :personal
   end
 end

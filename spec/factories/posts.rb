@@ -4,7 +4,6 @@ FactoryGirl.define do
     content { Faker::Lorem.sentence(50) }
     access :for_everyone
     blog
-    owner { create(:user) }
+    author { create(:user) }
   end
-
 end

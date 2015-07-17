@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150614090600) do
+ActiveRecord::Schema.define(version: 20150628032109) do
 
   create_table "blogs", force: :cascade do |t|
     t.string   "name",        limit: 255
@@ -29,13 +29,14 @@ ActiveRecord::Schema.define(version: 20150614090600) do
   add_index "blogs", ["user_id"], name: "index_blogs_on_user_id", using: :btree
 
   create_table "posts", force: :cascade do |t|
-    t.string   "title",      limit: 255
-    t.text     "content",    limit: 4294967295
-    t.integer  "access",     limit: 1
-    t.uuid     "blog_id",    limit: 16
-    t.uuid     "user_id",    limit: 16
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
+    t.string   "title",       limit: 255
+    t.text     "content",     limit: 4294967295
+    t.integer  "access",      limit: 1
+    t.uuid     "blog_id",     limit: 16
+    t.uuid     "user_id",     limit: 16
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.text     "content_cut", limit: 65535
   end
 
   add_index "posts", ["access"], name: "index_posts_on_access", using: :btree

@@ -7,7 +7,7 @@ class @Menu
       console.log 'Menu.create'
       @jPM = $.jPanelMenu
         menu:        '#menu'
-        trigge:      '.menu-trigger'
+        trigger:     '.menu-trigger'
         animated:    false
         beforeOpen : ->
           if matchMedia('only screen and (min-width: 992px)').matches

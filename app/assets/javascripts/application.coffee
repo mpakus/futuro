@@ -16,15 +16,14 @@ class @Future
 #  run: ->
 #    @setup_ajax()
 
-  setup_ajax: ->
-    $.ajaxSetup
-      data:
-        authenticity_token: authenticity_token
+#  setup_ajax: ->
+#    $.ajaxSetup
+#      data:
+#        authenticity_token: authenticity_token
 
   @ready: ->
     unless window.future?
       window.future = new Future
-#      window.future.run()
     window.future.always()
 
   always: ->

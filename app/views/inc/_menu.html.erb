@@ -1,6 +1,6 @@
 <div id="menu">
   <ul>
-    <li><i class="entypo-home"></i><a href="/">Home</a></li>
+    <li><i class="entypo-home"></i><a href="/"><%= t('home') %></a></li>
     <% if user_signed_in? %>
       <li><i class="entypo-user"></i><a href="@<%= current_user.uri %>"><%= current_user.name %></a></li>
       <li><i class="entypo-star"></i><a href="favorites.html">Favorites</a></li>

@@ -1,0 +1,20 @@
+<div class="post">
+  <section>
+    <div class="post-preview col-xs-10 no-gutter">
+
+      <h2><a href="<%= show_post_path(post.to_uri) %>"><%= post.title %></a></h2>
+
+      <p><%= post.content_cut %></p>
+
+      <p class="meta">
+        <a class="" href="category.html"><%= post.author.name %></a> in <a class="" href="category.html"><%= post.blog.name %></a>
+        <i class="link-spacer"></i> <i class="entypo-bookmark"></i> 2 minute read
+      </p>
+    </div>
+
+    <div class=" col-xs-2 no-gutter">
+      <img src="img/profile-5.png" class="user-icon user-1" alt="user-image">
+    </div>
+
+  </section>
+</div>

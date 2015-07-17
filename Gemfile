@@ -57,7 +57,6 @@ gem 'autoprefixer-rails' # css prefixer
 gem 'mini_magick' # image processing
 gem 'carrierwave' # file upload
 
-
 gem 'puma'
 gem 'activeuuid'      # uuid for AR
 

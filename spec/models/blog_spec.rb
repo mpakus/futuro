@@ -40,5 +40,4 @@ RSpec.describe Blog, type: :model do
     blog.valid?
     expect(blog.errors[:uri]).to include('is too long (maximum is 255 characters)')
   end
-  
 end
