@@ -17,3 +17,6 @@
 workspace.xml
 .rakeTasks
 .generators
+/.idea
+
+future.iml
