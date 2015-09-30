@@ -3,35 +3,35 @@
 
 	+breakpoint(sm)
 		padding: 60px 120px
+
 	+breakpoint(md)
 		padding: 50px
 
-.nav
-	height: 30px
+.sub-nav
 	border-bottom: solid 1px #f5f5f5
+	line-height: 30px
 
 	a
-		padding: 0 0 10px 0
+		display: inline-block
 		margin-right: 10px
+		line-height: 30px
 		font-family: $sans
-		color: $light-grey
-		text-transform: uppercase
-		font-weight: 700
 		letter-spacing: 2pt
+		text-decoration: none
+		color: $light-grey
+		+up-bold
 		+font-size(12)
 
-		&:hover
+		&:hover,
+		&:active,
+		&.active
+			border-bottom: solid 2px #000
 			color: $text-color
 
-	.active
-		border-bottom: solid 1px #000
-		color: $text-color
-
 .post
-	height: auto
 	padding: 30px 0
 	border-bottom: solid 1px #f5f5f5
-	+clearfix()
+	+clearfix
 
 	.post-preview
 
@@ -43,8 +43,9 @@
 				+font-size(32)
 
 			a
+				text-decoration: none
 				color: #333337
-				border: solid 0px transparent
+				border: none
 
 				&:hover
 					color: $light-grey
@@ -54,22 +55,13 @@
 
 			+breakpoint(md)
 				+font-size(18)
-	img
-		width: 50px
-		height: 50px
+	&.author-page
 
-	.user-icon
-		padding: 0
-		float: right
-		+border-radius(100%)
+		.post-preview p
+			margin: 0
 
-.link-spacer
-	margin: 0 2px 4px 2px
-	display: inline-block
-	height: 2px
-	width: 2px
-	background-color: $light-grey
-	+border-radius(100%)
+
+
 
 .category
 	margin-top: 15px
@@ -86,17 +78,19 @@
 		+font-size(20)
 		color: #fff
 
-	img
-		max-width: 100%
-
-.home-footer
+.split-footer
 	padding: 10px 0
+	+font-size(11)
+	letter-spacing: 1px
+	font-family: $sans
+	+up-bold
 
 	a
 		color: #999
-		border-bottom: 0 transparent
+		border-bottom: none
 
-		&:hover
+		&:hover,
+		&:active
 			color: #333
-			border-bottom: 0 transparent
+			border-bottom: none
 

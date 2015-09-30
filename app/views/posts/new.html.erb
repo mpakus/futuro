@@ -1,5 +1,16 @@
-<h1>New Post</h1>
+<header class="hero-image" role="banner" style="background-image: url(/img/default-single-hero.jpg);">
+  <%= render 'inc/burger_menu' %>
+  <%= render 'inc/menu' %>
+</header>
 
-<%= render 'form' %>
+<main class="container">
+  <div class="row">
+    <div class="col-xs-12 single-content">
 
-<%= link_to 'Back', posts_path %>
+      <%= render 'form' %>
+
+    </div>
+  </div>
+</main>
+
+<%= render 'footer' %>

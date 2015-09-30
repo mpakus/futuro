@@ -1,5 +1,4 @@
 class PostsController < ApplicationController
-  layout 'simple', only: [:edit, :new]
   before_action :set_post, only: [:edit, :update, :destroy]
 
   def index
