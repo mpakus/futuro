@@ -3,6 +3,6 @@ FactoryGirl.define do
     name  { Faker::Name.name }
     email { Faker::Internet.email(name) }
     password '100500'
-    confirmed_at Time.now
+    confirmed_at Time.current
   end
 end

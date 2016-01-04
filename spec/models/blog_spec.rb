@@ -24,7 +24,7 @@ RSpec.describe Blog, type: :model do
   it 'check uniq uri' do
     attrs = attributes_for(:blog, uri: 'hell-on-wheels')
     Blog.create(attrs)
-    blog  = Blog.new(attrs)
+    blog = Blog.new(attrs)
     blog.valid?
     expect(blog.errors[:uri]).to include('has already been taken')
   end

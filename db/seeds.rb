@@ -1,18 +1,18 @@
 User.destroy_all
 
 u = User.create({
-                email: 'renat@aomega.co',
-                password: 'mpak888',
-                name: 'MpaK',
-                uri:  'mpak'
+                email: 'user@futuro-blog.com',
+                password: 'password',
+                name: 'User',
+                uri:  'user'
             })
 u.confirm
 
 Blog.destroy_all
 
 blog = Blog.create({
-                name:        'MpaKus Dominion',
-                description: 'обитель',
+                name:        'Home Page',
+                description: 'personal page',
                 owner:       u,
                 variant:     :personal
             })

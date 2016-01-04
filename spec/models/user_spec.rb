@@ -16,7 +16,7 @@ RSpec.describe User, type: :model do
   it 'check uniq uri' do
     attrs = attributes_for(:user, uri: 'hell-of-wheels')
     User.create(attrs)
-    user  = User.new(attrs)
+    user = User.new(attrs)
     user.valid?
     expect(user.errors[:uri]).to include('has already been taken')
   end

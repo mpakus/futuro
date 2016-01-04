@@ -55,7 +55,7 @@ describe Post, type: :model do
 
   it 'to_uri return right hash' do
     post = create(:post)
-    uri_hash = {blog: post.blog.uri, id: post.id}
+    uri_hash = { blog: post.blog.uri, id: post.id }
     expect(post.to_uri).to eq uri_hash
   end
 end

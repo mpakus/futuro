@@ -8,7 +8,7 @@ class Post < ActiveRecord::Base
 
   belongs_to :blog
   belongs_to :author, class_name: 'User', foreign_key: :user_id
-  delegate   :uri, :name, to: :author, allow_nil: true, prefix: true
+  delegate :uri, :name, to: :author, allow_nil: true, prefix: true
 
   scope :by_author, ->(user) { where(author: user) }
   scope :newests,   -> { order(created_at: :DESC) }
@@ -20,6 +20,7 @@ class Post < ActiveRecord::Base
   end
 
   private
+
   def set_content_cut
     return if !content_cut.blank? || content.blank?
     self.content_cut = content.truncate(150)
