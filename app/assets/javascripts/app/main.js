@@ -1,150 +1,107 @@
-var jPM = {};
+var s,
+  app = {
 
-$(function() {
+    settings: {
+      jpm: {}
+    },
+    init: function () {
+      //Global settings
+      s = this.settings;
 
+      // initalize
+      this.initalizers();
+      this.bindUiActions();
+    },
+    bindUiActions: function () {
+      // Should include all JS user interactions
+      var self = this;
 
+      $('.select-posts,.select-categories').on('click', function () {
+        self.homePostsCatSwitch();
+      });
 
-    $('.select-posts, .select-categories').on('click', function () {
+      $('.social-icon').on('click', function () {
+        self.socialIconClick($(this));
+      });
 
-        $('.home-page-posts').toggleClass("hide");
-        $('.home-page-categories').toggleClass("hide");
+    },
+    initalizers: function () {
+      // Initalize any plugins for functions when page loads
 
-        $('.select-posts').toggleClass("active");
-        $('.select-categories').toggleClass("active");
+      // JPanel Menu Plugin -
+      this.jpm();
 
-        $('.home-footer').toggleClass("hide");
-    });
+      // Fast Click for Mobile - removes 300ms delay - https://github.com/ftlabs/fastclick
+      FastClick.attach(document.body);
 
-    $('.writer-icon').on('click', function () {
-        $(this).addClass("fadeOutUp");
+      // Add Bg colour from JS so jPanel has time to initalize
+      $('body').css({"background-color": "#333337"});
+    },
+    homePostsCatSwitch: function () {
+      // Toggles between showing the categories and posts on the homepage
+      $('.home-page-posts').toggleClass("hide");
+      $('.home-page-categories').toggleClass("hide");
+      $('.select-posts').toggleClass("active");
+      $('.select-categories').toggleClass("active");
+      $('.home-footer').toggleClass("hide");
+    },
+    socialIconClick: function (el) {
+      // Post page social Icons
+      // When Clicked pop up a share dialog
 
-    });
-/*
-    var graphData = [{
-        // Visits
-        data: [ [11, 540], [12, 600], [13,645], [14, 672], [15, 591], [16, 789], [17, 794], [18, 732], [19, 600],[20, 520], [21, 500] ],
-        color: '#69d193'
-    }, {
-        // Returning Visits
-        data: [ [11, 500], [12, 523], [13, 530], [14, 423], [15, 543], [16, 624], [17, 732], [18, 580],[19, 580], [20, 430], [21, 450] ],
-        color: '#4761e2',
-        points: { radius: 4, fillColor: '#4761e2' }
+      var platform = el.data('platform');
+      var message = el.data('message');
+      var url = el.data('url');
+
+      if (platform == 'mail') {
+        // Let mail use default browser behaviour
+        return true;
+      } else {
+        this.popItUp(platform, message, url);
+        return false;
+      }
+    },
+    popItUp: function (platform, message, url) {
+      // Create the popup with the correct location URL for sharing
+      var popUrl,
+        newWindow;
+
+      if (platform == 'twitter') {
+        popUrl = 'http://twitter.com/home?status=' + encodeURI(message) + '+' + url;
+
+      } else if (platform == 'facebook') {
+        popUrl = 'http://www.facebook.com/share.php?u' + url + '&amp;title=' + encodeURI(message);
+      }
+      newWindow = window.open(popUrl, 'name', 'height=500,width=600');
+      if (window.focus) {
+        newWindow.focus();
+      }
+      return false;
+
+    },
+    jpm: function () {
+      // Off Screen Navigation Plugin
+
+      s.jpm = $.jPanelMenu({
+        menu: '#menu-target',
+        trigger: '.menu-trigger',
+        animated: false,
+        beforeOpen: ( function () {
+          if (matchMedia('only screen and (min-width: 992px)').matches) {
+            $('.sidebar').css("left", "250px");
+          }
+        }),
+        beforeClose: ( function () {
+          $('.sidebar').css("left", "0");
+          $('.writer-icon, .side-writer-icon').removeClass("fadeOutUp");
+        })
+      });
+
+      s.jpm.on();
     }
-    ];
+  };
 
-    if( $('#graph-lines').length > 0 ) {
-
-        $.plot($('#graph-lines'), graphData, {
-            series: {
-                points: {
-                    show: true,
-                    radius: 5
-                },
-                lines: {
-                    show: true
-                },
-                shadowSize: 0
-            },
-            grid: {
-                color: '#646464',
-                borderColor: 'transparent',
-                borderWidth: 20,
-                hoverable: true
-            },
-            xaxis: {
-                tickColor: 'transparent',
-                tickDecimals: 0
-            },
-            yaxis: {
-                tickSize: 100,
-                label: "Price (USD)"
-            }
-        });
-
-        // Bars
-        $.plot($('#graph-bars'), graphData, {
-            series: {
-                bars: {
-                    show: true,
-                    barWidth: 0.9,
-                    align: 'center'
-                },
-                shadowSize: 0
-            },
-            grid: {
-                color: '#646464',
-                borderColor: 'transparent',
-                borderWidth: 20,
-                hoverable: true
-            },
-            xaxis: {
-                tickColor: 'transparent',
-                tickDecimals: 0
-            },
-            yaxis: {
-                tickSize: 1000
-            }
-        });
-        $('#graph-bars').hide();
-
-        $('#lines').on('click', function (e) {
-            $('#bars').removeClass('active');
-            $('#graph-bars').fadeOut();
-            $(this).addClass('active');
-            $('#graph-lines').fadeIn();
-            e.preventDefault();
-        });
-
-        $('#bars').on('click', function (e) {
-            $('#lines').removeClass('active');
-            $('#graph-lines').fadeOut();
-            $(this).addClass('active');
-            $('#graph-bars').fadeIn().removeClass('hidden');
-            e.preventDefault();
-        });*/
-
-        function showTooltip(x, y, contents) {
-            $('<div id="tooltip">' + contents + '</div>').css({
-                top: y - 16,
-                left: x + 20
-            }).appendTo('.container').fadeIn();
-        }
-/*
-        var previousPoint = null;
-
-        $('#graph-lines, #graph-bars').bind('plothover', function (event, pos, item) {
-            if (item) {
-                if (previousPoint != item.dataIndex) {
-                    previousPoint = item.dataIndex;
-                    $('#tooltip').remove();
-                    var x = item.datapoint[0],
-                        y = item.datapoint[1];
-                        showTooltip(item.pageX, item.pageY, y + ' readers on the' + x + 'th');
-                }
-            } else {
-                $('#tooltip').remove();
-                previousPoint = null;
-            }
-        });
-
-        $('.chart-visitors').easyPieChart({
-            animate: 3000,
-            barColor : '#4761e2',
-            lineWidth : 20,
-            lineCap: 'butt',
-            size: 150
-        });
-
-        $('.chart-downloads').easyPieChart({
-            animate: 4200,
-            barColor : '#4761e2',
-            lineWidth : 20,
-            lineCap: 'butt',
-            size: 150
-        });
-
-    }//end check if graph exists
- */
-
-
+$(document).ready(function () {
+  app.init();
 });
+

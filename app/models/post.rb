@@ -1,5 +1,6 @@
 class Post < ActiveRecord::Base
   include ActiveUUID::UUID
+  before_create :set_content_cut
 
   validates :title, presence: true, length: { maximum: 255 }
   validates :blog_id, :user_id, presence: true
@@ -11,9 +12,7 @@ class Post < ActiveRecord::Base
   delegate :uri, :name, to: :author, allow_nil: true, prefix: true
 
   scope :by_author, ->(user) { where(author: user) }
-  scope :newests,   -> { order(created_at: :DESC) }
-
-  before_create :set_content_cut
+  scope :newests,   -> { order(created_at: :desc) }
 
   def to_uri
     { blog: blog.uri, id: id }

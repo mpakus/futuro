@@ -1,5 +1,4 @@
 User.destroy_all
-
 u = User.create({
                 email: 'user@futuro-blog.com',
                 password: 'password',
@@ -9,7 +8,6 @@ u = User.create({
 u.confirm
 
 Blog.destroy_all
-
 blog = Blog.create({
                 name:        'Home Page',
                 description: 'personal page',
@@ -20,5 +18,10 @@ blog = Blog.create({
 Post.destroy_all
 
 100.times do
-  blog.posts.create!(title: Faker::Lorem.sentence(5), content: Faker::Lorem.sentence(300), author: u)
+  blog.posts.create!(
+    title: Faker::Lorem.sentence(5),
+    content: Faker::Lorem.sentence(300),
+    author: u
+  )
+  sleep 1
 end
