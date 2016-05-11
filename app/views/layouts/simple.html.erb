@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Future</title>
   <meta name="description" content="">
-  <meta name="keywords"    content="">
+  <meta name="keywords" content="">
   <meta name="viewport" content="width=device-width">
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -13,24 +13,31 @@
 
 <body>
 
-<%= render 'inc/burger_menu' %>
+  <main class="container left-container">
+    <div class="row">
+      <%= render 'shared/menu' %>
+      <section class="sidebar col-md-5 col-sm-12" style="background-image: <%= asset_url('default-contact.jpg') %>">
+        <%= render 'shared/burger' %>
+        <%= render 'shared/menu_no_js' %>
+        <div class="site-info">
+          <div class="primary-info">
+            <h1>Contact</h1>
+            <p>
+              Our team would love to hear from you. We're here for a quick chat, a lengthy discussion or perhaps just a hey.
+            </p>
+          </div>
+          <%= render 'shared/auth' %>
+        </div>
+      </section>
 
-<div class="container">
-  <div class="row">
-    <%= render 'inc/menu' %>
-    <div class="col-xs-12 main-content single-content stats-content">
-<!--
-      <h1><i class="entypo-window"></i>Dashboard</h1>
-      <h3 class="stats-subtitle">These are you stats for November</h3>
--->
-
-      <%= yield %>
-
+      <div class="col-md-7 col-sm-12 col-md-offset-5 main-content">
+        <%= flash_message(flash) %>
+        <%= yield %>
+        <%= render 'shared/footer' %>
+      </div>
     </div>
+  </main>
 
-  </div>
-</div>
-
-<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
 </html>

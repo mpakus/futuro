@@ -16,12 +16,10 @@ blog = Blog.create({
             })
 
 Post.destroy_all
-
 100.times do
   blog.posts.create!(
     title: Faker::Lorem.sentence(5),
     content: Faker::Lorem.sentence(300),
     author: u
   )
-  sleep 1
 end

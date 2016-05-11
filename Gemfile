@@ -27,14 +27,13 @@ gem 'sass-rails', '~> 5.0'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 
-# gem 'compass-rails', github: 'Compass/compass-rails', branch: 'master'
 # gem 'counter_culture', '~> 0.1.33' # counter_cache for AR models with conditions
 
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
-  gem 'rspec-rails', '~> 3.0'
+  gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'capybara-screenshot'

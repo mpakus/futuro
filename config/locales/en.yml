@@ -2,3 +2,6 @@ en:
   home: Home
   posts: Posts
   blogs: Blogs
+  futuro:
+    title: Futuro
+    description: 'Modern social content platform. <a href="/futuro/about/">Look at the features.</a>'

@@ -3,3 +3,24 @@ en:
     sign_up: Sign up
     sign_in: Sign in
     sign_out: Sign out
+
+  activerecord:
+      errors:
+        models:
+          user:
+            attributes:
+              email:
+                blank: Please fill the E-mail
+                taken: This E-mail has already been taken. Please use another one.
+              first_name:
+                blank: Please your First name
+              last_name:
+                blank: Please your Last name
+              password:
+                blank: Please fill the Password
+                too_short: Password is too short (minimum is %{count} characters)
+              password_confirmation:
+                blank: Please fill the Password confirmation
+                confirmation: Passwords doesn't match
+              agreement:
+                accepted: Agreement should be accepted

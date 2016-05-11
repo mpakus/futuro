@@ -1,8 +1,9 @@
 class User < ActiveRecord::Base
-  # :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable, :confirmable,
-         :recoverable, :rememberable, :trackable, :validatable
   include ActiveUUID::UUID
+
+  # :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :registerable, :confirmable, :recoverable,
+         :rememberable, :trackable, :validatable
 
   before_validation :set_alias
   validates :name, :uri, presence: true

@@ -1,0 +1,9 @@
+<div class="secondary-info">
+  <p>
+    <% if user_signed_in? %>
+    <% else  %>
+        <a class="btn btn-primary" href="<%= new_user_registration_path %>"><i class="fa fa-user-plus"></i><%= t('user.sign_up') %></a>
+        <a class="btn btn-success pull-right" href="<%= new_user_session_path %>"><i class="fa fa-sign-in"></i><%= t('user.sign_in') %></a>
+    <% end %>
+  </p>
+</div>

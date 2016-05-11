@@ -3,12 +3,11 @@ class Post < ActiveRecord::Base
   before_create :set_content_cut
 
   validates :title, presence: true, length: { maximum: 255 }
-  validates :blog_id, :user_id, presence: true
 
   enum access: [:for_everyone, :only_followers, :only_friends, :only_me]
 
-  belongs_to :blog
-  belongs_to :author, class_name: 'User', foreign_key: :user_id
+  belongs_to :blog, required: true
+  belongs_to :author, class_name: 'User', foreign_key: :user_id, required: true
   delegate :uri, :name, to: :author, allow_nil: true, prefix: true
 
   scope :by_author, ->(user) { where(author: user) }

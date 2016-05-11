@@ -4,6 +4,7 @@ var s,
     settings: {
       jpm: {}
     },
+
     init: function () {
       //Global settings
       s = this.settings;
@@ -12,6 +13,7 @@ var s,
       this.initalizers();
       this.bindUiActions();
     },
+
     bindUiActions: function () {
       // Should include all JS user interactions
       var self = this;
@@ -25,6 +27,7 @@ var s,
       });
 
     },
+
     initalizers: function () {
       // Initalize any plugins for functions when page loads
 
@@ -35,8 +38,9 @@ var s,
       FastClick.attach(document.body);
 
       // Add Bg colour from JS so jPanel has time to initalize
-      $('body').css({"background-color": "#333337"});
+      //$('body').css({"background-color": "#333337"});
     },
+
     homePostsCatSwitch: function () {
       // Toggles between showing the categories and posts on the homepage
       $('.home-page-posts').toggleClass("hide");
@@ -45,6 +49,7 @@ var s,
       $('.select-categories').toggleClass("active");
       $('.home-footer').toggleClass("hide");
     },
+
     socialIconClick: function (el) {
       // Post page social Icons
       // When Clicked pop up a share dialog
@@ -61,6 +66,7 @@ var s,
         return false;
       }
     },
+
     popItUp: function (platform, message, url) {
       // Create the popup with the correct location URL for sharing
       var popUrl,
@@ -79,6 +85,7 @@ var s,
       return false;
 
     },
+
     jpm: function () {
       // Off Screen Navigation Plugin
 
@@ -105,3 +112,7 @@ $(document).ready(function () {
   app.init();
 });
 
+$(document).on('page:change', function(event) {
+  console.log('page:change');
+  app.init();
+});
