@@ -1,0 +1,17 @@
+.menu-trigger {
+  top: 20px;
+  left: 40px;
+  z-index: 1080;
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  a{
+    color: #4761e2;
+    text-decoration: none;
+    border: none;
+  }
+  a:hover{
+    text-decoration: none;
+    border: none;
+  }
+}

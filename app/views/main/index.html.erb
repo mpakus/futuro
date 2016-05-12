@@ -1,27 +1,16 @@
 <main class="container left-container">
   <div class="row">
 
-    <%= render 'shared/menu' %>
-
     <section class="sidebar col-md-5 col-sm-12" style="background-image: <%= asset_url('default-sidebar.jpg') %>">
-
-      <span class="menu-trigger animated fadeInDown">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-      </span>
-
-      <%= render 'shared/menu_no_js' %>
-
+      <%= render 'shared/logo' %>
       <div class="site-info">
         <div class="primary-info">
           <h1><%= t('futuro.title') %></h1>
           <p><%= t('futuro.description').html_safe %></p>
         </div>
-
         <%= render 'shared/auth' %>
       </div>
-    </section><!-- end sidebar -->
+    </section>
 
     <section class="col-md-7 col-sm-12 col-md-offset-5 main-content">
       <div class="sub-nav">
@@ -29,7 +18,7 @@
         <a href="#" class="select-categories">Categories</a>
       </div>
 
-      <div class="home-page-posts animated fadeIn ">
+      <div class="home-page-posts animated fadeIn">
 
         <article class="post">
           <div class="post-preview col-xs-10  no-gutter">
@@ -143,9 +132,9 @@
             <img src="img/profile-3.jpg" class="user-icon" alt="user-image">
           </div>
         </article>
-      </div><!-- Home page posts -->
+      </div>
 
-      <div class="home-page-categories hide animated fadeIn ">
+      <div class="home-page-categories hide animated fadeIn">
         <div class="category row">
           <section>
             <div class="category-preview col-xs-6 col-sm-4 ">
