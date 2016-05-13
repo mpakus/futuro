@@ -7,6 +7,8 @@ class Post < ActiveRecord::Base
   enum access: [:for_everyone, :only_followers, :only_friends, :only_me]
 
   belongs_to :blog, required: true
+  delegate :uri, :name, to: :blog, allow_nil: true, prefix: true
+
   belongs_to :author, class_name: 'User', foreign_key: :user_id, required: true
   delegate :uri, :name, to: :author, allow_nil: true, prefix: true
 
