@@ -24,3 +24,24 @@ class Blog < ActiveRecord::Base
     uri.gsub('/\@/', '')
   end
 end
+
+# == Schema Information
+#
+# Table name: blogs
+#
+#  created_at  :datetime         not null
+#  description :text(65535)
+#  id          :uuid(16)         not null, primary key
+#  image       :string(255)
+#  name        :string(255)
+#  settings    :text(65535)
+#  updated_at  :datetime         not null
+#  uri         :string(255)
+#  user_id     :uuid(16)
+#  variant     :integer
+#
+# Indexes
+#
+#  index_blogs_on_uri      (uri)
+#  index_blogs_on_user_id  (user_id)
+#

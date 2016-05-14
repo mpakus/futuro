@@ -1,14 +1,15 @@
 class Posts::PostsController < ApplicationController
+  include Blogable
   include Postable
 
   before_action :find_fresh_posts, only: [:index]
+  before_action :find_blog, only: [:show]
   before_action :find_post, only: [:edit, :update, :destroy]
   layout 'posts', only: [:index]
 
   def index; end
 
   def show
-    @blog = Blog.find_by_uri(params[:blog])
     @post = @blog.posts.find(params[:id])
   end
 

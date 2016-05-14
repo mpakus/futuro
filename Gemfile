@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'aasm'   # state machine for User::Breeder
 gem 'activeuuid'      # uuid for AR
+gem 'annotate' # annotate models
 gem 'autoprefixer-rails' # css prefixer
 gem 'bootstrap-sass', '~> 3.3.4'
 gem 'carrierwave' # file upload
