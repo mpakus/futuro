@@ -3,8 +3,8 @@ module ApplicationHelper
     html = ''
     if form && form.errors.any?
       html << '<div class="alert-danger alert"><a class="close" data-dismiss="alert">&times;</a><ul>'
-      form.errors.each do |_field, msg|
-        html << %(<li>#{msg}</li>)
+      form.errors.each do |field, msg|
+        html << %(<li>#{field} #{msg}</li>)
       end
       html << '</ul></div>'
     end

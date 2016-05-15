@@ -10,8 +10,8 @@ class User < ActiveRecord::Base
   validates :uri,        uniqueness: true, length: { maximum: 255 }
   validates :name,       length: { maximum: 255 }
 
-  has_many :blogs, dependent: :destroy
-  has_many :posts, dependent: :destroy
+  has_many :blogs, foreign_key: :user_id, primary_key: :id, dependent: :destroy
+  has_many :posts, foreign_key: :user_id, dependent: :destroy
 
   protected
 
@@ -32,7 +32,7 @@ end
 #  current_sign_in_ip     :string(255)
 #  email                  :string(255)      default(""), not null
 #  encrypted_password     :string(255)      default(""), not null
-#  id                     :integer          not null, primary key
+#  id                     :uuid(16)         not null, primary key
 #  last_sign_in_at        :datetime
 #  last_sign_in_ip        :string(255)
 #  name                   :string(255)

@@ -7,7 +7,7 @@ class Blog < ActiveRecord::Base
   validates :name, presence: true, length: { maximum: 255 }
   validates :uri, presence: true, uniqueness: true, length: { maximum: 255 }
 
-  belongs_to :owner, class_name: 'User', foreign_key: :user_id, required: true
+  belongs_to :owner, class_name: 'User', foreign_key: :user_id, primary_key: :id, required: true
   has_many :posts, dependent: :destroy
 
   enum variant: [:personal, :community]
