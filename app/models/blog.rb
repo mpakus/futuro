@@ -1,5 +1,6 @@
 class Blog < ActiveRecord::Base
-  has_secure_token
+  include Tokenized
+
   before_validation :set_uri_from_name
   before_validation :remove_dog
 
@@ -10,6 +11,10 @@ class Blog < ActiveRecord::Base
   has_many :posts, dependent: :destroy
 
   enum variant: [:personal, :community]
+
+  def to_param
+    uri
+  end
 
   private
 

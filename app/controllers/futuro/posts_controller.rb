@@ -1,6 +1,7 @@
 class Futuro::PostsController < ApplicationController
   before_action :authenticate_user!
   before_action :find_post, only: [:edit, :update, :destroy]
+
   def new
     @post = Post.new(title: 'Your title', author: current_user)
     @post.save!(validate: false)
@@ -24,7 +25,7 @@ class Futuro::PostsController < ApplicationController
   private
 
   def find_post
-    @post = Post.find(params[:id])
+    @post = Post.find_by_token!(params[:id])
   end
 
   def post_params

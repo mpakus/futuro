@@ -1,5 +1,6 @@
 class Post < ActiveRecord::Base
-  has_secure_token
+  include Tokenized
+
   before_create :set_content_cut
 
   acts_as_taggable
