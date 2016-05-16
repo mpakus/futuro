@@ -2,7 +2,7 @@ class Futuro::PostsController < ApplicationController
   before_action :authenticate_user!
   before_action :find_post, only: [:edit, :update, :destroy]
   def new
-    @post = Post.new(title: 'Your title')
+    @post = Post.new(title: 'Your title', author: current_user)
     @post.save!(validate: false)
     redirect_to edit_futuro_post_path(@post)
   end
@@ -28,7 +28,11 @@ class Futuro::PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:title)
+    params.require(:post).permit(:title, :blog_id, :tag_list)
+  end
+
+  def checked_blog
+    current_user.blogs.find(params[:post][:blog])
   end
 
   def prepare_post

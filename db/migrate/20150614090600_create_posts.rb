@@ -1,13 +1,12 @@
 class CreatePosts < ActiveRecord::Migration
   def change
-    create_table :posts, id: false do |t|
-      t.uuid       :id, primary_key: true
+    create_table :posts  do |t|
       t.string     :title, limit: 255
       t.text       :content, limit: 4294967295
       t.integer    :access, limit: 1, index: true
-      t.uuid :blog_id, index: true
-      t.uuid :user_id, index: true
-
+      t.references :blog
+      t.references :user
+      t.string :token, limit: 24, index: true, uniq: true
       t.timestamps null: false
     end
   end

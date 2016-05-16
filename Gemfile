@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'aasm'   # state machine for User::Breeder
-gem 'activeuuid'      # uuid for AR
+gem 'acts-as-taggable-on' # tags
 gem 'annotate' # annotate models
 gem 'autoprefixer-rails' # css prefixer
 gem 'bootstrap-sass', '~> 3.3.4'
@@ -12,6 +12,7 @@ gem 'devise-bootstrap-views'
 gem 'font-awesome-rails'
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
+gem 'has_secure_token'
 gem 'kaminari' # pagination
 gem 'little_decorator' # decorator for models
 gem 'local_time' # for human readable time

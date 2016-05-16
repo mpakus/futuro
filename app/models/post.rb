@@ -1,16 +1,18 @@
 class Post < ActiveRecord::Base
-  include ActiveUUID::UUID
+  has_secure_token
   before_create :set_content_cut
 
-  validates :title, presence: true, length: { maximum: 255 }
+  acts_as_taggable
 
-  enum access: [:for_everyone, :only_followers, :only_friends, :only_me]
+  validates :title, presence: true, length: { maximum: 255 }
 
   belongs_to :blog, required: true
   delegate :uri, :name, to: :blog, allow_nil: true, prefix: true
 
   belongs_to :author, class_name: 'User', foreign_key: :user_id, required: true
   delegate :uri, :name, to: :author, allow_nil: true, prefix: true
+
+  enum access: [:for_everyone, :only_followers, :only_friends, :only_me]
 
   scope :by_author, ->(user) { where(author: user) }
   scope :newests,   -> { order(created_at: :desc) }
@@ -32,18 +34,18 @@ end
 # Table name: posts
 #
 #  access      :integer
-#  blog_id     :uuid(16)
+#  blog_id     :integer
 #  content     :text(4294967295)
 #  content_cut :text(65535)
 #  created_at  :datetime         not null
-#  id          :uuid(16)         not null, primary key
+#  id          :integer          not null, primary key
 #  title       :string(255)
+#  token       :string(24)
 #  updated_at  :datetime         not null
-#  user_id     :uuid(16)
+#  user_id     :integer
 #
 # Indexes
 #
-#  index_posts_on_access   (access)
-#  index_posts_on_blog_id  (blog_id)
-#  index_posts_on_user_id  (user_id)
+#  index_posts_on_access  (access)
+#  index_posts_on_token   (token)
 #

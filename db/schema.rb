@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150628032109) do
+ActiveRecord::Schema.define(version: 20160516101542) do
 
   create_table "blogs", force: :cascade do |t|
     t.string   "name",        limit: 255
@@ -19,33 +19,55 @@ ActiveRecord::Schema.define(version: 20150628032109) do
     t.text     "description", limit: 65535
     t.string   "image",       limit: 255
     t.integer  "variant",     limit: 4
-    t.uuid     "user_id",     limit: 16
+    t.integer  "user_id",     limit: 4
+    t.string   "token",       limit: 24
     t.text     "settings",    limit: 65535
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
   end
 
+  add_index "blogs", ["token"], name: "index_blogs_on_token", using: :btree
   add_index "blogs", ["uri"], name: "index_blogs_on_uri", using: :btree
-  add_index "blogs", ["user_id"], name: "index_blogs_on_user_id", using: :btree
 
   create_table "posts", force: :cascade do |t|
     t.string   "title",       limit: 255
     t.text     "content",     limit: 4294967295
     t.integer  "access",      limit: 1
-    t.uuid     "blog_id",     limit: 16
-    t.uuid     "user_id",     limit: 16
+    t.integer  "blog_id",     limit: 4
+    t.integer  "user_id",     limit: 4
+    t.string   "token",       limit: 24
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
     t.text     "content_cut", limit: 65535
   end
 
   add_index "posts", ["access"], name: "index_posts_on_access", using: :btree
-  add_index "posts", ["blog_id"], name: "index_posts_on_blog_id", using: :btree
-  add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
+  add_index "posts", ["token"], name: "index_posts_on_token", using: :btree
+
+  create_table "taggings", force: :cascade do |t|
+    t.integer  "tag_id",        limit: 4
+    t.integer  "taggable_id",   limit: 4
+    t.string   "taggable_type", limit: 255
+    t.integer  "tagger_id",     limit: 4
+    t.string   "tagger_type",   limit: 255
+    t.string   "context",       limit: 128
+    t.datetime "created_at"
+  end
+
+  add_index "taggings", ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true, using: :btree
+  add_index "taggings", ["taggable_id", "taggable_type", "context"], name: "index_taggings_on_taggable_id_and_taggable_type_and_context", using: :btree
+
+  create_table "tags", force: :cascade do |t|
+    t.string  "name",           limit: 255
+    t.integer "taggings_count", limit: 4,   default: 0
+  end
+
+  add_index "tags", ["name"], name: "index_tags_on_name", unique: true, using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "name",                   limit: 255
     t.string   "uri",                    limit: 255
+    t.string   "token",                  limit: 24
     t.datetime "created_at",                                      null: false
     t.datetime "updated_at",                                      null: false
     t.string   "email",                  limit: 255, default: "", null: false
@@ -66,5 +88,6 @@ ActiveRecord::Schema.define(version: 20150628032109) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  add_index "users", ["token"], name: "index_users_on_token", using: :btree
 
 end

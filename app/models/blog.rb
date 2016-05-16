@@ -1,13 +1,12 @@
 class Blog < ActiveRecord::Base
-  include ActiveUUID::UUID
-
+  has_secure_token
   before_validation :set_uri_from_name
   before_validation :remove_dog
 
   validates :name, presence: true, length: { maximum: 255 }
   validates :uri, presence: true, uniqueness: true, length: { maximum: 255 }
 
-  belongs_to :owner, class_name: 'User', foreign_key: :user_id, primary_key: :id, required: true
+  belongs_to :owner, class_name: 'User', foreign_key: :user_id, required: true
   has_many :posts, dependent: :destroy
 
   enum variant: [:personal, :community]
@@ -31,17 +30,18 @@ end
 #
 #  created_at  :datetime         not null
 #  description :text(65535)
-#  id          :uuid(16)         not null, primary key
+#  id          :integer          not null, primary key
 #  image       :string(255)
 #  name        :string(255)
 #  settings    :text(65535)
+#  token       :string(24)
 #  updated_at  :datetime         not null
 #  uri         :string(255)
-#  user_id     :uuid(16)
+#  user_id     :integer
 #  variant     :integer
 #
 # Indexes
 #
-#  index_blogs_on_uri      (uri)
-#  index_blogs_on_user_id  (user_id)
+#  index_blogs_on_token  (token)
+#  index_blogs_on_uri    (uri)
 #

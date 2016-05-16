@@ -1,6 +1,5 @@
 class User < ActiveRecord::Base
-  include ActiveUUID::UUID
-
+  has_secure_token
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable, :confirmable, :recoverable,
          :rememberable, :trackable, :validatable
@@ -32,7 +31,7 @@ end
 #  current_sign_in_ip     :string(255)
 #  email                  :string(255)      default(""), not null
 #  encrypted_password     :string(255)      default(""), not null
-#  id                     :uuid(16)         not null, primary key
+#  id                     :integer          not null, primary key
 #  last_sign_in_at        :datetime
 #  last_sign_in_ip        :string(255)
 #  name                   :string(255)
@@ -40,6 +39,7 @@ end
 #  reset_password_sent_at :datetime
 #  reset_password_token   :string(255)
 #  sign_in_count          :integer          default(0), not null
+#  token                  :string(24)
 #  unconfirmed_email      :string(255)
 #  updated_at             :datetime         not null
 #  uri                    :string(255)
@@ -48,4 +48,5 @@ end
 #
 #  index_users_on_email                 (email) UNIQUE
 #  index_users_on_reset_password_token  (reset_password_token) UNIQUE
+#  index_users_on_token                 (token)
 #
