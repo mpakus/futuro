@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 ENV['RAILS_ENV'] ||= 'test'
 require 'spec_helper'
 require File.expand_path('../../config/environment', __FILE__)
@@ -19,30 +20,26 @@ RSpec.configure do |config|
   config.include Devise::TestHelpers, type: :controller
 
   config.include Warden::Test::Helpers
-  config.before :suite do
-    Warden.test_mode!
-    DatabaseCleaner.clean_with(:truncation)
-  end
 
   config.after :each do
     Warden.test_reset!
     FileUtils.rm_rf(Dir["#{Rails.root}/system/files/"])
   end
 
-  config.before(:each) do
+  config.before :suite do
+    Warden.test_mode!
     DatabaseCleaner.strategy = :transaction
-  end
-
-  config.before(:each, js: true) do
-    DatabaseCleaner.strategy = :truncation
+    DatabaseCleaner.clean_with(:truncation)
   end
 
   config.around(:each) do |example|
     Warden.test_reset!
+    ActionMailer::Base.deliveries.clear
     DatabaseCleaner.cleaning do
       example.run
     end
   end
+
   config.infer_base_class_for_anonymous_controllers = false
 
   config.use_transactional_fixtures = false

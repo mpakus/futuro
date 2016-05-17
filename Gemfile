@@ -1,7 +1,9 @@
+# frozen_string_literal: true
 source 'https://rubygems.org'
 
-gem 'aasm'   # state machine for User::Breeder
+gem 'aasm' # state machine for User::Breeder
 gem 'acts-as-taggable-on' # tags
+gem 'acts_as_list' # order post::blocks
 gem 'annotate' # annotate models
 gem 'autoprefixer-rails' # css prefixer
 gem 'bootstrap-sass', '~> 3.3.4'
@@ -33,7 +35,6 @@ gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
   gem 'byebug'
-  gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
@@ -48,6 +49,7 @@ group :development, :test do
 end
 
 group :development do
+  # gem 'web-console', '~> 2.0'
   gem 'better_errors'
   gem 'meta_request'
   gem 'sextant'

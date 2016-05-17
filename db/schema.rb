@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160516101542) do
+ActiveRecord::Schema.define(version: 20160517142108) do
 
   create_table "blogs", force: :cascade do |t|
     t.string   "name",        limit: 255
@@ -28,6 +28,18 @@ ActiveRecord::Schema.define(version: 20160516101542) do
 
   add_index "blogs", ["token"], name: "index_blogs_on_token", using: :btree
   add_index "blogs", ["uri"], name: "index_blogs_on_uri", using: :btree
+
+  create_table "post_blocks", force: :cascade do |t|
+    t.integer  "post_id",        limit: 4
+    t.integer  "position",       limit: 2,   default: 0
+    t.integer  "blockable_id",   limit: 4
+    t.string   "blockable_type", limit: 255
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+  end
+
+  add_index "post_blocks", ["blockable_type", "blockable_id"], name: "index_post_blocks_on_blockable_type_and_blockable_id", using: :btree
+  add_index "post_blocks", ["post_id"], name: "index_post_blocks_on_post_id", using: :btree
 
   create_table "posts", force: :cascade do |t|
     t.string   "title",       limit: 255
@@ -90,4 +102,5 @@ ActiveRecord::Schema.define(version: 20160516101542) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   add_index "users", ["token"], name: "index_users_on_token", using: :btree
 
+  add_foreign_key "post_blocks", "posts"
 end

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module Postable
   extend ActiveSupport::Concern
 

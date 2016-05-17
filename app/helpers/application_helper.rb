@@ -1,6 +1,7 @@
+# frozen_string_literal: true
 module ApplicationHelper
   def form_errors(form)
-    html = ''
+    html = []
     if form && form.errors.any?
       html << '<div class="alert-danger alert"><a class="close" data-dismiss="alert">&times;</a><ul>'
       form.errors.each do |field, msg|
@@ -8,11 +9,11 @@ module ApplicationHelper
       end
       html << '</ul></div>'
     end
-    html.html_safe
+    html.join.html_safe
   end
 
   def flash_message(flash)
-    html = ''
+    html = []
     flash.each do |name, msg|
       next if !msg.is_a?(String) && msg.blank? && name.blank?
       html << %(
@@ -22,7 +23,7 @@ module ApplicationHelper
         </div>
       )
     end
-    html.html_safe
+    html.join.html_safe
   end
 
   def title(title)

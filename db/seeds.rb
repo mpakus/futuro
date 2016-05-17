@@ -1,19 +1,16 @@
+# frozen_string_literal: true
 User.destroy_all
-u = User.create({
-                email: 'user@futuro-blog.com',
+u = User.create(email: 'user@futuro-blog.com',
                 password: 'password',
                 name: 'User',
-                uri:  'user'
-            })
+                uri:  'user')
 u.confirm
 
 Blog.destroy_all
-blog = Blog.create({
-                name:        'Home Page',
-                description: 'personal page',
-                owner:       u,
-                variant:     :personal
-            })
+blog = Blog.create(name:        'Home Page',
+                   description: 'personal page',
+                   owner:       u,
+                   variant:     :personal)
 
 Post.destroy_all
 100.times do

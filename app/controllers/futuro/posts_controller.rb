@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class Futuro::PostsController < ApplicationController
   before_action :authenticate_user!
   before_action :find_post, only: [:edit, :update, :destroy]

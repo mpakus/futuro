@@ -1,5 +1,4 @@
-require 'rails_helper'
-
+# frozen_string_literal: true
 RSpec.describe ApplicationHelper, type: :helper do
   describe '.form_errors' do
     let(:form) { FactoryGirl.build(:user, email: nil, password: nil) }

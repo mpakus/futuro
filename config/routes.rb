@@ -1,8 +1,9 @@
+# frozen_string_literal: true
 Rails.application.routes.draw do
   devise_for :users
   root 'posts/posts#index'
 
-  get '@:user_uri'         => 'posts#user', as: :show_user
+  get '@:user_uri' => 'posts#user', as: :show_user
 
   # /home-page
   get ':blog' => 'posts/blogs#index', as: :blog_posts, defaults: { format: 'html' }

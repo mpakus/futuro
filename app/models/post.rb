@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class Post < ActiveRecord::Base
   include Tokenized
 
@@ -13,10 +14,12 @@ class Post < ActiveRecord::Base
   belongs_to :author, class_name: 'User', foreign_key: :user_id, required: true
   delegate :uri, :name, to: :author, allow_nil: true, prefix: true
 
+  has_many :blocks, -> { order(position: :asc) }, class_name: 'Post::Block', foreign_key: :post_id
+
   enum access: [:for_everyone, :only_followers, :only_friends, :only_me]
 
   scope :by_author, ->(user) { where(author: user) }
-  scope :newests,   -> { order(created_at: :desc) }
+  scope :newests, ->{ order(created_at: :desc) }
 
   def to_uri
     { blog: blog.uri, id: id }
