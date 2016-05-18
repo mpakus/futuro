@@ -14,12 +14,16 @@ class Post < ActiveRecord::Base
   belongs_to :author, class_name: 'User', foreign_key: :user_id, required: true
   delegate :uri, :name, to: :author, allow_nil: true, prefix: true
 
-  has_many :blocks, -> { order(position: :asc) }, class_name: 'Post::Block', foreign_key: :post_id
-
-  enum access: [:for_everyone, :only_followers, :only_friends, :only_me]
+  has_many :list_of_blocks, -> { order(position: :asc) }, class_name: 'Post::Block'
 
   scope :by_author, ->(user) { where(author: user) }
   scope :newests, -> { order(created_at: :desc) }
+
+  enum access: [:for_everyone, :only_followers, :only_friends, :only_me]
+
+  def blocks
+    list_of_blocks.collect(&:blockable)
+  end
 
   def to_uri
     { blog: blog.uri, id: id }
