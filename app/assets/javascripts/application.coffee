@@ -23,7 +23,7 @@ class @Future
     window.future.always()
 
   once: ->
-    FastClick.attach(document.body);
+    FastClick.attach(document.body)
 
   always: ->
 
