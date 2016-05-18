@@ -20,3 +20,4 @@ workspace.xml
 /.idea
 
 future.iml
+/coverage

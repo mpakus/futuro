@@ -47,14 +47,13 @@ RSpec.describe Post, type: :model do
   end
 
   describe '.newests' do
+    before do
+      @p3 = FactoryGirl.create(:post)
+      @p2 = FactoryGirl.create(:post)
+      @p1 = FactoryGirl.create(:post)
+    end
     it 'sort by created_at' do
-      (1..3).each { FactoryGirl.create(:post) }
-
-      Post.newests.each do |post|
-        prev_date ||= post.created_at
-        expect(post.created_at <= prev_date).to be_truthy
-        prev_date = post.created_at
-      end
+      expect(Post.newests.to_a).to eq [@p3, @p2, @p1]
     end
   end
 

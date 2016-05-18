@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 RSpec.describe Post::Block, type: :model do
   context 'with order' do
-    before :all do
+    before do
       @post = FactoryGirl.create(:post)
       @block1 = @post.blocks.create
       @block2 = @post.blocks.create

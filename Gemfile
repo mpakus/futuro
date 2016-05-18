@@ -8,6 +8,7 @@ gem 'annotate' # annotate models
 gem 'autoprefixer-rails' # css prefixer
 gem 'bootstrap-sass', '~> 3.3.4'
 gem 'carrierwave' # file upload
+gem 'codeclimate-test-reporter', group: :test, require: nil
 gem 'coffee-rails', '~> 4.1.0'
 gem 'devise'
 gem 'devise-bootstrap-views'

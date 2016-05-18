@@ -19,7 +19,7 @@ class Post < ActiveRecord::Base
   enum access: [:for_everyone, :only_followers, :only_friends, :only_me]
 
   scope :by_author, ->(user) { where(author: user) }
-  scope :newests, ->{ order(created_at: :desc) }
+  scope :newests, -> { order(created_at: :desc) }
 
   def to_uri
     { blog: blog.uri, id: id }
