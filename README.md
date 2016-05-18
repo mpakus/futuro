@@ -1,7 +1,7 @@
 Futuro - community media platform
 ------
 
-[![CircleCI](https://circleci.com/gh/mpakus/futuro/tree/master.svg?style=svg)](https://circleci.com/gh/mpakus/futuro/tree/master) [![Code Climate](https://codeclimate.com/github/mpakus/futuro/badges/gpa.svg)](https://codeclimate.com/github/mpakus/futuro) [![Test Coverage](https://codeclimate.com/github/mpakus/futuro/badges/coverage.svg)](https://codeclimate.com/github/mpakus/futuro/coverage) [![Issue Count](https://codeclimate.com/github/mpakus/futuro/badges/issue_count.svg)](https://codeclimate.com/github/mpakus/futuro)
+[![CircleCI](https://circleci.com/gh/mpakus/futuro/tree/master.svg?style=svg)](https://circleci.com/gh/mpakus/futuro/tree/master) [![Code Climate](https://codeclimate.com/github/mpakus/futuro/badges/gpa.svg)](https://codeclimate.com/github/mpakus/futuro) [![Test Coverage](https://codeclimate.com/github/mpakus/futuro/badges/coverage.svg)](https://codeclimate.com/github/mpakus/futuro/coverage) [![Issue Count](https://codeclimate.com/github/mpakus/futuro/badges/issue_count.svg?x)](https://codeclimate.com/github/mpakus/futuro)
 
 Versions:
 ---------
