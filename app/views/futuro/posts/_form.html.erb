@@ -15,6 +15,14 @@
       <%= f.text_field :tag_list, class: 'form-control' %>
     </div>
 
+    <div id="post_blocks"></div>
+
+    <div id="post_controls" class="panel panel-body">
+      <%= link_to futuro_post_blocks_path(@post, block: :text), method: :post, remote: true do %>
+        <span class="fa fa-text-width"></span>
+      <% end  %>
+    </div>
+
     <div class="form-group">
       <%= f.submit 'Save', class: 'btn btn-default' %>
     </div>

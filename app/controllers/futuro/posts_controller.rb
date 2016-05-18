@@ -1,10 +1,12 @@
 # frozen_string_literal: true
 class Futuro::PostsController < ApplicationController
+  include Postable
   before_action :authenticate_user!
-  before_action :find_post, only: [:edit, :update, :destroy]
+  before_action :find_user_post, only: [:edit, :update, :destroy]
 
   def new
-    @post = Post.new(title: 'Your title', author: current_user)
+    #   @todo: Post::CreateDraft.new(author: current_user).perform
+    @post = Post.new(title: 'Your title', author: current_user, blog: current_user.blogs.first)
     @post.save!(validate: false)
     redirect_to edit_futuro_post_path(@post)
   end
@@ -24,10 +26,6 @@ class Futuro::PostsController < ApplicationController
   end
 
   private
-
-  def find_post
-    @post = Post.find_by_token!(params[:id])
-  end
 
   def post_params
     params.require(:post).permit(:title, :blog_id, :tag_list)
