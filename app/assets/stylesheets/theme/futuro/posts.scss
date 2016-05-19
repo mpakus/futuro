@@ -1,0 +1,12 @@
+.post-form{
+  margin-top: 15px;
+
+  .form-control, .form-control:focus{
+    border: none;
+    outline: none;
+    box-shadow: none;
+  }
+  .form-control:focus{
+    color: $main-color;
+  }
+}

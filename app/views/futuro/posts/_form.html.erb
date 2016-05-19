@@ -1,28 +1,18 @@
-<%= form_for([:futuro, @post], url: { action: :update, format: :js }, remote: true, authenticity_token: true, html: { id: 'post_form' }) do |f| %>
-
-  <%= form_errors @post %>
-
-  <div class="form-group">
-    <%= f.text_field :title, class: 'form-control', placeholder: t('posts.form.placeholder.title') %>
+<div class="container">
+  <div class="row">
+    <%= form_for([:futuro, @post], remote: true, authenticity_token: true, html: { class: 'post-form', id: 'post_form' }) do |f| %>
+      <div class="col-xs-12">
+        <div class="form-group">
+          <%= f.text_field :title, class: 'form-control', placeholder: t('posts.form.placeholder.title') %>
+        </div>
+      </div>
+      <div class="form-group col-xs-6">
+        <%= f.collection_select :blog_id, current_user.blogs.all, :id, :name, {}, class: 'form-control' %>
+      </div>
+      <div class="form-group col-xs-6">
+        <%= f.text_field :tag_list, class: 'form-control', placeholder: t('posts.form.placeholder.tags') %>
+      </div>
+      <%= f.submit t('posts.form.publish_btn'), class: 'btn btn-default hide', id: 'post_publish' %>
+    <% end %>
   </div>
-
-  <div class="form-group">
-    <%= f.collection_select :blog_id, current_user.blogs.all, :id, :name, {}, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.text_field :tag_list, class: 'form-control', placeholder: t('posts.form.placeholder.tags') %>
-  </div>
-
-  <div id="post_blocks"></div>
-
-  <div id="post_controls" class="panel panel-body">
-    <%= link_to futuro_post_blocks_path(@post, block: :text), method: :post, remote: true do %>
-      <span class="fa fa-text-width"></span>
-    <% end  %>
-  </div>
-
-  <div class="form-group">
-    <%= f.submit t('posts.form.publish_btn'), class: 'btn btn-default hide', id: 'post_publish' %>
-  </div>
-<% end %>
+</div>
