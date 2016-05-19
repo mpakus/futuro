@@ -5,6 +5,7 @@
 #= require nprogress
 #= require nprogress-turbolinks
 #= require_tree ./theme
+#= require_tree ./futuro
 #= require turbolinks
 
 class @Future
@@ -24,6 +25,7 @@ class @Future
 
   once: ->
     FastClick.attach(document.body)
+    new Posts
 
   always: ->
 

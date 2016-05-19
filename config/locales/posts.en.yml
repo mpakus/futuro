@@ -1,0 +1,7 @@
+en:
+  posts:
+    form:
+      placeholder:
+        tags: comma separated list of tags (ex. tag1, tag2)
+        title: Greatest title ever
+      publish_btn: Publish

@@ -15,11 +15,12 @@ class Futuro::PostsController < ApplicationController
 
   def update
     prepare_post
-    if @post.update_attributes(post_params)
-      redirect_to show_post_path(@post.to_uri), notice: :created
-    else
-      render :edit
-    end
+    @post.update_attributes(post_params)
+    # if @post.update_attributes(post_params)
+    #   redirect_to show_post_path(@post.to_uri), notice: :created
+    # else
+    #   render :edit
+    # end
   end
 
   def destroy
