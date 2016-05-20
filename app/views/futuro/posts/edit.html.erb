@@ -1,5 +1,4 @@
 <header class="posts-tools">
-  <!-- tools -->
   <%= render 'shared/logo' %>
   <%= render 'form' %>
 </header>
@@ -9,12 +8,7 @@
     <div class="col-xs-12">
 
       <div id="post_blocks"></div>
-
-      <div id="post_controls" class="panel panel-body">
-        <%= link_to futuro_post_blocks_path(@post, block: :text), method: :post, remote: true do %>
-            <span class="fa fa-text-width"></span>
-        <% end  %>
-      </div>
+      <%= render 'block_controls' %>
 
       <%= render 'shared/footer' %>
     </div>
