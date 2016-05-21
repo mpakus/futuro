@@ -29,4 +29,9 @@ module ApplicationHelper
   def title(title)
     content_for :title, strip_tags(title)
   end
+
+  def post_block_template(block)
+    klass = block.blockable.class.to_s.split('::').last.downcase
+    "futuro/posts/blocks/#{klass}/form"
+  end
 end

@@ -7,7 +7,12 @@
   <div class="row">
     <div class="col-xs-12">
 
-      <div id="post_blocks"></div>
+      <div id="post_blocks">
+        <% @post.list_of_blocks.each do |block| %>
+          <%= render post_block_template(block), block: block %>
+        <% end %>
+      </div>
+
       <%= render 'block_controls' %>
 
       <%= render 'shared/footer' %>
