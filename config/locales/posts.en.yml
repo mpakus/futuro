@@ -2,7 +2,8 @@ en:
   posts:
     form:
       placeholder:
-        tags: comma separated list of tags (ex. tag1, tag2)
-        title: Greatest title ever
+        tags: Comma separated list of tags (ex. tag1, tag2)
+        title: Your post's title
+        textarea: Type your text
       btn:
         publish: Publish

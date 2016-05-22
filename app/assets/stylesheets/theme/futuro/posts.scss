@@ -1,13 +1,23 @@
+@mixin no-border{
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+@mixin no-border-focus{
+  color: $main-color;
+  outline: none;
+  box-shadow: none;
+  border-bottom: 1px dashed #DDD;
+}
+
 .post-form{
   margin-top: 15px;
 
-  .form-control, .form-control:focus{
-    border: none;
-    outline: none;
-    box-shadow: none;
+  .form-control, .form-control:focus, textarea{
+    @include no-border;
   }
-  .form-control:focus{
-    color: $main-color;
+  .form-control:focus, textarea:focus{
+    @include no-border-focus;
   }
 
   .btn-file {
@@ -28,5 +38,14 @@
     background: white;
     cursor: inherit;
     display: block;
+  }
+}
+
+.post-blocks{
+  textarea{
+    @include no-border;
+  }
+  textarea:focus{
+    @include no-border-focus;
   }
 }
