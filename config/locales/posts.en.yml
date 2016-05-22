@@ -7,3 +7,5 @@ en:
         textarea: Type your text
       btn:
         publish: Publish
+    msg:
+      saved: Saved...

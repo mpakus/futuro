@@ -25,6 +25,7 @@ class @Future
     @setup_ajax()
     FastClick.attach(document.body)
     @posts = new Posts
+    @notification = new Notification
 
   always: ->
 
