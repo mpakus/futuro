@@ -76,4 +76,16 @@ RSpec.describe ApplicationHelper, type: :helper do
       expect(post_block_template(Block.new, 'show')).to eq 'futuro/posts/blocks/text/show'
     end
   end
+
+  describe '.clean_text' do
+    let(:text){ '<h1>Hello</h1> <div>World!</div> <img src="http://aomega.co/logo.png" /> <Script>alert("BAD!")</script>' }
+    it 'remove bad tags' do
+      expect(clean_text(text)).to_not include 'script'
+    end
+    it 'leave right tags' do
+      expect(clean_text(text)).to include '<h1>'
+      expect(clean_text(text)).to include '<div>'
+      expect(clean_text(text)).to include 'img'
+    end
+  end
 end

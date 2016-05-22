@@ -22,7 +22,7 @@ class Post::Publish
   end
 
   def render_block(block)
-    view.render post_block_template(block, 'show'), block: block
+    clean_text view.render(post_block_template(block, 'show'), block: block)
   end
 
   def view
