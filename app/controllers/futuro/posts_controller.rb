@@ -1,7 +1,5 @@
 # frozen_string_literal: true
-class Futuro::PostsController < ApplicationController
-  include Postable
-  before_action :authenticate_user!
+class Futuro::PostsController < Futuro::ApplicationController
   before_action :find_user_post, only: [:edit, :update, :destroy]
 
   def new
@@ -16,15 +14,9 @@ class Futuro::PostsController < ApplicationController
   def update
     prepare_post
     @post.update_attributes(post_params)
-    # if @post.update_attributes(post_params)
-    #   redirect_to show_post_path(@post.to_uri), notice: :created
-    # else
-    #   render :edit
-    # end
   end
 
-  def destroy
-  end
+  # def destroy; end
 
   private
 

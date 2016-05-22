@@ -11,4 +11,8 @@ RSpec.describe Post::Block, type: :model do
       expect(@post.list_of_blocks.to_a).to eq [@block1, @block2]
     end
   end
+
+  context 'with ::KINDS' do
+    it { expect(Post::Block::KINDS).to eq %w(text).freeze }
+  end
 end

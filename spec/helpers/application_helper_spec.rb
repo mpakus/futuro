@@ -1,4 +1,12 @@
 # frozen_string_literal: true
+class Block
+  def blockable
+    Block::Text.new
+  end
+end
+class Block::Text
+end
+
 RSpec.describe ApplicationHelper, type: :helper do
   describe '.form_errors' do
     let(:form) { FactoryGirl.build(:user, email: nil, password: nil) }
@@ -57,6 +65,15 @@ RSpec.describe ApplicationHelper, type: :helper do
       text = '<p>Hello <br/>World!</p>'
       title(text)
       expect(helper.content_for(:title)).to eq 'Hello World!'
+    end
+  end
+
+  describe '.post_block_template' do
+    it 'returns string with class name' do
+      expect(post_block_template(Block.new)).to eq 'futuro/posts/blocks/text/form'
+    end
+    it 'returns 2nd argument template' do
+      expect(post_block_template(Block.new, 'show')).to eq 'futuro/posts/blocks/text/show'
     end
   end
 end

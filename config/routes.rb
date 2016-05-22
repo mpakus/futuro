@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   namespace :futuro do
     resources :posts, except: [:create, :show] do
       resources :blocks, only: [:create], controller: 'posts/blocks'
+      resources :publishes, only: [:create], controller: 'posts/publishes'
+      resources :texts, only: [:update], controller: 'posts/blocks/texts'
     end
   end
 end

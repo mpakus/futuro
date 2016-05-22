@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 source 'https://rubygems.org'
 
-gem 'aasm' # state machine for User::Breeder
+gem 'aasm' # state machine
 gem 'acts-as-taggable-on' # tags
 gem 'acts_as_list' # order post::blocks
 gem 'annotate' # annotate models

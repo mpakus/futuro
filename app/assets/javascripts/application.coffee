@@ -9,13 +9,10 @@
 #= require turbolinks
 
 class @Future
-#  run: ->
-#    @setup_ajax()
-
-#  setup_ajax: ->
-#    $.ajaxSetup
-#      data:
-#        authenticity_token: authenticity_token
+  setup_ajax: ->
+    $.ajaxSetup
+      data:
+        authenticity_token: authenticity_token
 
   @ready: ->
     unless window.future?
@@ -24,8 +21,9 @@ class @Future
     window.future.always()
 
   once: ->
+    @setup_ajax()
     FastClick.attach(document.body)
-    new Posts
+    @posts = new Posts
 
   always: ->
 

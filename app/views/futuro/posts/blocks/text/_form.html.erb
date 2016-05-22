@@ -1,3 +1,3 @@
 <div class="form-group">
-  <%= text_area_tag :content, block.blockable.content, class: 'form-control', rows: 5 %>
+  <%= text_area_tag :content, block.blockable.content, class: 'form-control post-block-text', rows: 5, 'data-url': futuro_post_text_path(@post, block.blockable) %>
 </div>
