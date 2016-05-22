@@ -7,6 +7,7 @@
 #= require_tree ./theme
 #= require_tree ./futuro
 #= require turbolinks
+#= require jquery-fileupload/basic
 
 class @Future
   setup_ajax: ->

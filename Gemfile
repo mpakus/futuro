@@ -14,6 +14,7 @@ gem 'devise'
 gem 'devise-bootstrap-views'
 gem 'font-awesome-rails'
 gem 'jquery-rails'
+gem 'jquery-fileupload-rails'
 gem 'jquery-turbolinks'
 gem 'has_secure_token'
 gem 'kaminari' # pagination

@@ -6,12 +6,18 @@
           <%= f.text_field :title, class: 'form-control', placeholder: t('posts.form.placeholder.title') %>
         </div>
       </div>
-      <div class="form-group col-xs-6">
+      <div class="form-group col-xs-5">
         <%= f.collection_select :blog_id, current_user.blogs.all, :id, :name, {}, class: 'form-control' %>
       </div>
-      <div class="form-group col-xs-6">
+      <div class="form-group col-xs-5">
         <%= f.text_field :tag_list, class: 'form-control', placeholder: t('posts.form.placeholder.tags') %>
       </div>
+        <div class="form-group col-xs-2">
+           <span class="btn btn-primary btn-file">
+             <span class="glyphicon glyphicon-camera"></span>
+             <input type="file" name="image" id="post-header-uploader" class="js_post_header_image_uploader" data-url="<%= futuro_post_path(@post) %>" />
+           </span>
+        </div>
       <%= f.submit '#', class: 'btn btn-default hide', id: 'post_save' %>
     <% end %>
   </div>
