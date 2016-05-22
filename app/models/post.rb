@@ -5,6 +5,7 @@ class Post < ActiveRecord::Base
   before_create :set_content_cut
 
   acts_as_taggable
+  mount_uploader :header, PostHeaderUploader
 
   validates :title, presence: true, length: { maximum: 255 }
 
@@ -46,6 +47,7 @@ end
 #  content     :text(4294967295)
 #  content_cut :text(65535)
 #  created_at  :datetime         not null
+#  header      :string(255)
 #  id          :integer          not null, primary key
 #  title       :string(255)
 #  token       :string(24)

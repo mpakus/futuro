@@ -21,7 +21,7 @@ class Futuro::PostsController < Futuro::ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :blog_id, :tag_list)
+    params.require(:post).permit(:title, :blog_id, :tag_list, :header)
   end
 
   def checked_blog

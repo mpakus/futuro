@@ -9,17 +9,13 @@ class @Posts
     $('.js_post_header_image_uploader').fileupload
       method:   'PATCH'
       dataType: 'json'
-      start: ->
-#        $('#upload_modal').modal('show')
       done: (e, data)->
 #        $(div).html("""<img src="#{data.result.image.mini.url}" alt="" />""")
       progressall: (e, data)->
         progress = parseInt(data.loaded / data.total * 100, 10)
         NProgress.set(progress)
-#        $('#upload_progress > .progress-bar ').css('width', progress + '%')
       stop: ->
         NProgress.set(0)
-#        $('#upload_progress > .progress-bar').css('width', '0')
 
   init_post_blocks: ->
     @block_text = new PostBlockText

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160518134212) do
+ActiveRecord::Schema.define(version: 20160522093421) do
 
   create_table "blogs", force: :cascade do |t|
     t.string   "name",        limit: 255
@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(version: 20160518134212) do
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
     t.text     "content_cut", limit: 65535
+    t.string   "header",      limit: 255
   end
 
   add_index "posts", ["access"], name: "index_posts_on_access", using: :btree
