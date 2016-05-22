@@ -1,6 +1,10 @@
 class @PostBlockText
   constructor: ->
     $(document).on 'change', '.post-block-text', @save
+    @set_autogrow()
+
+  set_autogrow: ->
+    $('.post-block-text').autogrow( { vertical: true, horizontal: false } );
 
   save: ->
     $this = $(@)
