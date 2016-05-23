@@ -1,20 +1,29 @@
-class @PostBlockText
+class @PostsBlocksText
   constructor: ->
-    $(document).on 'change', '.post-block-text', @save
-    @set_autogrow()
+    @editor = new MediumEditor '.editor',
+      delay: 1000
+      taretBlank: true
+      paste:
+        cleanPastedHTML: true
+        cleanAttrs: ['style', 'dir']
+        cleanTags: ['label', 'meta', 'script']
+      anchorPreview:
+        hideDelay: 300
+    @editor.subscribe 'editableInput', @text_changed
 
   set_autogrow: ->
     $('.post-block-text').autogrow( { vertical: true, horizontal: false } );
 
-  save: ->
-    $this = $(@)
-    url = $this.data('url')
-    text = $this.val()
+  text_changed: (e, editor)->
+    $editor = $(editor)
+    text = $editor.html()
+    len = text.length
+    return if Math.abs(len - @counter) < 15
+
+    @counter = len
+    url = $editor.data('url')
     $.ajax
       url:      url
       method:   'PATCH'
       data:     { text: text }
       dataType: 'json'
-      success: (data)->
-        console.log data.status
-

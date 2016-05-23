@@ -4,7 +4,6 @@
   box-shadow: none;
 }
 @mixin no-border-focus{
-  color: $main-color;
   outline: none;
   box-shadow: none;
   border-bottom: 1px dashed #DDD;
@@ -13,10 +12,10 @@
 .post-form{
   margin-top: 15px;
 
-  .form-control, .form-control:focus, textarea{
+  .form-control{
     @include no-border;
   }
-  .form-control:focus, textarea:focus{
+  .form-control:focus{
     @include no-border-focus;
   }
 
@@ -42,10 +41,10 @@
 }
 
 .post-blocks{
-  textarea{
+  textarea, .editor{
     @include no-border;
   }
-  textarea:focus{
+  textarea:focus, .editor:focus, textarea:focus, .editor:before, .editor:after{
     @include no-border-focus;
   }
 }

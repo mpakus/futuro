@@ -18,7 +18,7 @@ class @Posts
         NProgress.set(0)
 
   init_post_blocks: ->
-    @block_text = new PostBlockText
+    @blocks_text = new PostsBlocksText
 
   init_post_events: ->
     $(document).on 'change', '#post_title', @save

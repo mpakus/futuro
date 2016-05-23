@@ -20,6 +20,7 @@ gem 'has_secure_token'
 gem 'kaminari' # pagination
 gem 'little_decorator' # decorator for models
 gem 'local_time' # for human readable time
+gem 'medium-editor-rails' # visual editor
 gem 'mini_magick' # image processing
 gem 'mysql2', '~> 0.3.20'
 gem 'nprogress-rails' # progressbar for turbolinks

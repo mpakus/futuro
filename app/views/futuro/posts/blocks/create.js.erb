@@ -1,1 +1,2 @@
-$('#post_blocks').append('<%= j render "futuro/posts/blocks/#{@type}/form", block: @block %>').find('.post-block-text').autogrow( { vertical: true, horizontal: false } );
+$('#post_blocks').append('<%= j render "futuro/posts/blocks/#{@type}/form", block: @block %>');
+future.posts.blocks_text.editor.addElements('.editor');

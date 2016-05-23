@@ -8,6 +8,7 @@
 #= require_tree ./futuro
 #= require turbolinks
 #= require jquery-fileupload/basic
+#= require medium-editor
 
 class @Future
   setup_ajax: ->
