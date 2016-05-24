@@ -27,7 +27,7 @@ class Post < ActiveRecord::Base
   end
 
   def to_uri
-    { blog: blog.uri, id: id }
+    { blog: blog.uri, id: token }
   end
 
   private

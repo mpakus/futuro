@@ -13,7 +13,7 @@ class Futuro::PostsController < Futuro::ApplicationController
 
   def update
     prepare_post
-    @post.update_attributes(post_params)
+    @post.update(post_params)
   end
 
   # def destroy; end

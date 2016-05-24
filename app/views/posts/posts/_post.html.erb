@@ -2,7 +2,7 @@
   <div class="post-preview col-xs-10 no-gutter">
     <h2><%= link_to post.title, show_post_path(post.to_uri) %></h2>
 
-    <p><%= post.content_cut %></p>
+    <p><%= post.content_cut&.html_safe %></p>
 
     <p class="meta">
       <a href="author.html"><%= post.author_name %></a> in <a href="/<%= post.blog.uri %>"><%= post.blog_name %></a> <i class="link-spacer"></i>

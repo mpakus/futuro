@@ -1,5 +1,9 @@
 class @PostsBlocksText
   constructor: ->
+    @create_editor()
+    @editor.subscribe 'editableInput', @text_changed
+
+  create_editor: ->
     @editor = new MediumEditor '.editor',
       delay: 1000
       taretBlank: true
@@ -9,7 +13,6 @@ class @PostsBlocksText
         cleanTags: ['label', 'meta', 'script']
       anchorPreview:
         hideDelay: 300
-    @editor.subscribe 'editableInput', @text_changed
 
   set_autogrow: ->
     $('.post-block-text').autogrow( { vertical: true, horizontal: false } );

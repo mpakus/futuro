@@ -1,10 +1,11 @@
-<div id="post_controls" class="panel panel-body">
+<hr/>
+
+<div id="post_controls" class="row">
   <div class="col-lg-10">
     <%= link_to futuro_post_blocks_path(@post, block: :text), method: :post, remote: true do %>
-      <span class="fa fa-text-width"></span>
+      <span class="fa fa-text-width btn btn-default"></span>
     <% end %>
   </div>
-
   <div class="col-lg-2">
     <%= link_to t('posts.form.btn.publish'), futuro_post_publishes_path(@post), method: :post, remote: true, class: 'btn btn-success pull-right' %>
   </div>

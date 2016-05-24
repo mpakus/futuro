@@ -5,41 +5,12 @@ class Posts::PostsController < ApplicationController
 
   before_action :find_fresh_posts, only: [:index]
   before_action :find_blog, only: [:show]
-  before_action :find_post, only: [:edit, :update, :destroy]
   layout 'posts', only: [:index]
 
   def index; end
 
   def show
-    @post = @blog.posts.find(params[:id])
-  end
-
-  def new
-    @post = Post.new
-  end
-
-  def edit; end
-
-  def create
-    @post = Post.new(post_params)
-    if @post.save
-      redirect_to @post, notice: 'Post was successfully created.'
-    else
-      render :new
-    end
-  end
-
-  def update
-    if @post.update(post_params)
-      redirect_to @post, notice: 'Post was successfully updated.'
-    else
-      render :edit
-    end
-  end
-
-  def destroy
-    @post.destroy
-    redirect_to posts_url, notice: 'Post was successfully destroyed.'
+    @post = @blog.posts.find_by_token!(params[:id])
   end
 
   def user
@@ -49,10 +20,6 @@ class Posts::PostsController < ApplicationController
   end
 
   private
-
-  def find_post
-    @post = Post.find(params[:id])
-  end
 
   def post_params
     params.require(:post).permit(:title, :content, :access, :blog_id)

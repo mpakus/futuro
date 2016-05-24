@@ -1,7 +1,7 @@
 class Futuro::Posts::Blocks::TextsController < Futuro::Posts::Blocks::ApplicationController
   def update
     find_text
-    @text.update_attributes(content: params[:text])
+    @text.update(content: params[:text])
     render json: { status: 'ok' }
   end
 
