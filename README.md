@@ -6,8 +6,11 @@ Futuro - social publishing platform
 Versions:
 ---------
 
+0.4
+- text block like Medium editor
+
 0.3
-- content blocks mechanizm (text block prototype)
+- content blocks mechanizm
 
 0.2
 - blog & posts structure

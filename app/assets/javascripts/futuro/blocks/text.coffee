@@ -1,5 +1,10 @@
 class @PostsBlocksText
   constructor: ->
+    $(document).on 'futuro:block:create:text', @on_create.bind(@)
+    @create_editor()
+
+  # Callback after when block created
+  on_create: ->
     @create_editor()
 
   create_editor: ->
@@ -14,9 +19,6 @@ class @PostsBlocksText
       anchorPreview:
         hideDelay: 300
     @editor.subscribe 'editableInput', @text_changed
-
-  set_autogrow: ->
-    $('.post-block-text').autogrow( { vertical: true, horizontal: false } );
 
   text_changed: (e, editor)->
     $editor = $(editor)
