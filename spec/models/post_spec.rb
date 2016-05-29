@@ -60,7 +60,7 @@ RSpec.describe Post, type: :model do
   describe '#to_uri' do
     it 'returns right hash' do
       post = FactoryGirl.create(:post)
-      uri_hash = { blog: post.blog.uri, id: post.id }
+      uri_hash = { blog: post.blog.uri, id: post.token }
       expect(post.to_uri).to eq uri_hash
     end
   end
