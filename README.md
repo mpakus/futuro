@@ -19,6 +19,8 @@ Versions:
 - registration
 - design
 
-Helpful resources:
+Screenshots:
 ------------------
+
+![Alt text](https://monosnap.com/file/bxYDA5Og2n10zAc49KGH3v3wNCllOX.png)
                                    

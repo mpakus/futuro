@@ -1,0 +1,65 @@
+#post_form_panel{
+  height: 120px;
+  width: 100%;
+  border-bottom: 2px solid $border-color;
+  display: block;
+  overflow: hidden;
+  //@include breakpoint(sm) {
+  //  height: 100px;
+  //}
+  //@include breakpoint(md) {
+  //  height: 100px;
+  //}
+  //@include breakpoint(lg) {
+  //  height: 100px;
+  //}
+
+  .post-form{
+
+    .form-control{
+      @include no-border;
+    }
+    .form-control:focus{
+      @include no-border-focus;
+    }
+
+    .btn-file {
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-file input[type=file] {
+      position: absolute;
+      top: 0;
+      right: 0;
+      min-width: 100%;
+      min-height: 100%;
+      font-size: 100px;
+      text-align: right;
+      filter: alpha(opacity=0);
+      opacity: 0;
+      outline: none;
+      background: white;
+      cursor: inherit;
+      display: block;
+    }
+  }
+
+  // Panel for Post Title only
+  .post-title-panel{
+    margin-top: 35px;
+    height: 85px;
+
+    .post-title{
+      @include font-size(24);
+      height: 34px;
+    }
+  }
+}
+
+.js-post-form-settings-btn{
+  margin-top: -12px;
+}
+
+.post-controls{
+  margin-top: 15px;
+}

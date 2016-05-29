@@ -1,12 +1,29 @@
-<hr/>
+<div id="post_controls" class="row clearfix post-controls">
+  <div class="panel panel-default">
+    <div class="panel-body">
 
-<div id="post_controls" class="row">
-  <div class="col-lg-10">
-    <%= link_to futuro_post_blocks_path(@post, block: :text), method: :post, remote: true do %>
-      <span class="fa fa-text-width btn btn-default"></span>
-    <% end %>
-  </div>
-  <div class="col-lg-2">
-    <%= link_to t('posts.form.btn.publish'), futuro_post_publishes_path(@post), method: :post, remote: true, class: 'btn btn-success pull-right' %>
+      <div class="col-lg-10 btn-group">
+        <%= link_to futuro_post_blocks_path(@post, block: :text), method: :post, remote: true, class: 'btn btn-primary' do %>
+          <span class="fa fa-text-width"></span>
+        <% end %>
+        <%= link_to futuro_post_blocks_path(@post, block: :text), method: :post, remote: true, class: 'btn btn-primary' do %>
+            <span class="fa fa-code"></span>
+        <% end %>
+        <%= link_to futuro_post_blocks_path(@post, block: :text), method: :post, remote: true, class: 'btn btn-primary' do %>
+          <span class="fa fa-picture-o"></span>
+        <% end %>
+        <%= link_to futuro_post_blocks_path(@post, block: :text), method: :post, remote: true, class: 'btn btn-primary' do %>
+          <span class="fa fa-video-camera"></span>
+        <% end %>
+        <%= link_to futuro_post_blocks_path(@post, block: :text), method: :post, remote: true, class: 'btn btn-primary' do %>
+          <span class="fa fa-globe"></span>
+        <% end %>
+      </div>
+
+      <div class="col-lg-2">
+        <%= link_to t('posts.form.btn.publish'), futuro_post_publishes_path(@post), method: :post, remote: true, class: 'btn btn-success pull-right' %>
+      </div>
+
+    </div>
   </div>
 </div>

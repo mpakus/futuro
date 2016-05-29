@@ -1,0 +1,11 @@
+.post-blocks{
+  textarea, .editor{
+    @include no-border;
+    p {
+      margin-bottom: 15px;
+    }
+  }
+  textarea:focus, .editor:focus, textarea:focus, .editor:before, .editor:after{
+    @include no-border-focus;
+  }
+}

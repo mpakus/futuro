@@ -1,0 +1,13 @@
+@mixin no-border{
+  border: none;
+  outline: none;
+  box-shadow: none;
+  border-left: 1px solid transparent;
+}
+@mixin no-border-focus{
+  outline: none;
+  box-shadow: none;
+  border-left: 1px solid #DDD;
+}
+
+$border-color: #EEE;

@@ -16,9 +16,11 @@
 @import "partials/author";
 @import "partials/alt-home";
 @import "partials/page-404";
-@import "partials/posts";
 @import "nojs";
-@import 'futuro/posts';
+// posts
+@import 'futuro/post-vars';
+@import 'futuro/post-form';
+@import 'futuro/post-blocks';
 @import 'futuro/text';
 @import 'toastr';
 

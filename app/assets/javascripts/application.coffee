@@ -15,6 +15,8 @@ class @Future
     $.ajaxSetup
       data:
         authenticity_token: authenticity_token
+    $(document).on 'ajaxSend', -> NProgress.start()
+    $(document).on 'ajaxComplete', -> NProgress.done()
 
   @ready: ->
     unless window.future?

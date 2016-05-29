@@ -2,9 +2,9 @@
   <div class="row">
     <div class="col-lg-10 col-lg-offset-1">
       <%= form_for([:futuro, @post], remote: true, authenticity_token: true, multipart: true, html: { class: 'post-form', id: 'post_form' }) do |f| %>
-        <div class="col-xs-12">
+        <div class="col-xs-12 post-title-panel">
           <div class="form-group">
-            <%= f.text_field :title, class: 'form-control', placeholder: t('posts.form.placeholder.title') %>
+            <%= f.text_field :title, class: 'form-control post-title', placeholder: t('posts.form.placeholder.title') %>
           </div>
         </div>
 
@@ -14,12 +14,12 @@
         <div class="form-group col-xs-5">
           <%= f.text_field :tag_list, class: 'form-control', placeholder: t('posts.form.placeholder.tags') %>
         </div>
-          <div class="form-group col-xs-2">
-             <span class="btn btn-primary btn-file pull-right">
-               <span class="glyphicon glyphicon-camera"></span>
-               <%= f.file_field :header,  id: 'post-header-uploader', class: 'js_post_header_image_uploader', 'data-url': futuro_post_path(@post) %>
-             </span>
-          </div>
+        <div class="form-group col-xs-2">
+           <span class="btn btn-primary btn-file pull-right">
+             <span class="glyphicon glyphicon-camera"></span>
+             <%= f.file_field :header,  id: 'post-header-uploader', class: 'js_post_header_image_uploader', 'data-url': futuro_post_path(@post) %>
+           </span>
+        </div>
         <%= f.submit '#', class: 'btn btn-default hide', id: 'post_save' %>
       <% end %>
     </div>
