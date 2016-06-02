@@ -29,6 +29,7 @@ class @Future
     FastClick.attach(document.body)
     @posts = new Posts
     @notification = new Notification
+    @users = new Users
 
   always: ->
 

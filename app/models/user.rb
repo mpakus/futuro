@@ -13,6 +13,10 @@ class User < ActiveRecord::Base
   has_many :blogs, foreign_key: :user_id, primary_key: :id, dependent: :destroy
   has_many :posts, foreign_key: :user_id, dependent: :destroy
 
+  def personal_uri
+    blogs.first&.uri
+  end
+
   protected
 
   def set_alias

@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: {
+    registrations: 'users/registrations'
+  }
+
   root 'posts/posts#index'
 
   get '@:user_uri' => 'posts#user', as: :show_user

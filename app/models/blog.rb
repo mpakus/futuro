@@ -11,7 +11,7 @@ class Blog < ActiveRecord::Base
   belongs_to :owner, class_name: 'User', foreign_key: :user_id, required: true
   has_many :posts, dependent: :destroy
 
-  enum variant: [:personal, :community]
+  enum variant: %i(personal community)
 
   def to_param
     uri

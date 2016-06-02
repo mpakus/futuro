@@ -8,8 +8,9 @@
           </div>
         </div>
 
-        <div class="form-group col-xs-5">
+        <div class="form-group col-xs-5 input-group">
           <%= f.collection_select :blog_id, current_user.blogs.all, :id, :name, {}, class: 'form-control' %>
+          <a href="#"><span class="fa fa-plus"></span></a>
         </div>
         <div class="form-group col-xs-5">
           <%= f.text_field :tag_list, class: 'form-control', placeholder: t('posts.form.placeholder.tags') %>
