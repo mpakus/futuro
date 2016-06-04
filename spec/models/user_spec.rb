@@ -4,13 +4,13 @@ RSpec.describe User, type: :model do
     it 'check empty name' do
       user = FactoryGirl.build(:user, name: nil)
       user.valid?
-      expect(user.errors[:name]).to include("can't be blank")
+      expect(user.errors[:name]).to include(t('activerecord.errors.models.user.attributes.name.blank'))
     end
 
     it 'check empty user uri because of empty name too' do
       user = FactoryGirl.build(:user, name: nil, uri: nil)
       user.valid?
-      expect(user.errors[:uri]).to include("can't be blank")
+      expect(user.errors[:uri]).to include(t('activerecord.errors.models.user.attributes.uri.blank'))
     end
 
     it 'check uniq uri' do
@@ -18,7 +18,7 @@ RSpec.describe User, type: :model do
       User.create(attrs)
       user = User.new(attrs)
       user.valid?
-      expect(user.errors[:uri]).to include('has already been taken')
+      expect(user.errors[:uri]).to include(t('activerecord.errors.models.user.attributes.uri.taken'))
     end
 
     it 'check length of name' do

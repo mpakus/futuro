@@ -7,4 +7,5 @@ en:
             name:
               blank: Please fill the Name (Title) of Blog
             uri:
+              blank: Please fill the URL of the Blog
               taken: Blog URL already taken

@@ -3,7 +3,7 @@ RSpec.describe Blog, type: :model do
   it 'check empty name' do
     blog = FactoryGirl.build(:blog, name: nil)
     blog.valid?
-    expect(blog.errors[:name]).to include("can't be blank")
+    expect(blog.errors[:name]).to include(t('activerecord.errors.models.blog.attributes.name.blank'))
   end
 
   it 'check how Blog fill uri from name' do
@@ -17,7 +17,7 @@ RSpec.describe Blog, type: :model do
   it 'check empty uri because of empty name too' do
     blog = FactoryGirl.build(:blog, name: nil, uri: nil)
     blog.valid?
-    expect(blog.errors[:uri]).to include("can't be blank")
+    expect(blog.errors[:uri]).to include(t('activerecord.errors.models.blog.attributes.uri.blank'))
   end
 
   it 'check uniq uri' do
@@ -25,7 +25,7 @@ RSpec.describe Blog, type: :model do
     Blog.create(attrs)
     blog = Blog.new(attrs)
     blog.valid?
-    expect(blog.errors[:uri]).to include('has already been taken')
+    expect(blog.errors[:uri]).to include(t('activerecord.errors.models.blog.attributes.uri.taken'))
   end
 
   it 'check length of name' do
