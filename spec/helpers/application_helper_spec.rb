@@ -78,7 +78,7 @@ RSpec.describe ApplicationHelper, type: :helper do
   end
 
   describe '.clean_text' do
-    let(:text){ '<h1>Hello</h1> <div>World!</div> <img src="http://aomega.co/logo.png" /> <Script>alert("BAD!")</script>' }
+    let(:text) { '<h1>Hello</h1> <div>World!</div> <img src="http://aomega.co/logo.png" /> <Script>alert("BAD!")</script>' }
     it 'remove bad tags' do
       expect(clean_text(text)).to_not include 'script'
     end

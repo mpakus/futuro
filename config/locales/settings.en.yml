@@ -1,0 +1,7 @@
+en:
+  settings:
+    title: Settings
+    blog:
+      list: Your blogs
+      create: Create Blog
+      created: Blog created

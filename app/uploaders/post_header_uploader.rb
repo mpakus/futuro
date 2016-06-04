@@ -1,4 +1,5 @@
 # encoding: utf-8
+# frozen_string_literal: true
 
 class PostHeaderUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
@@ -26,8 +27,8 @@ class PostHeaderUploader < CarrierWave::Uploader::Base
   # Process files as they are uploaded:
   # process :scale => [200, 300]
   #
-  def scale(width, height)
-      process resize_to_fit: [1400, 1100]
+  def scale(_width, _height)
+    process resize_to_fit: [1400, 1100]
   end
 
   # Create different versions of your uploaded files:

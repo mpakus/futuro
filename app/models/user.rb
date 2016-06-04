@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 class User < ActiveRecord::Base
   has_secure_token
-  # :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable, :confirmable, :recoverable,
+
+  # :lockable, :timeoutable and :omniauthable, :confirmable
+  devise :database_authenticatable, :registerable, :recoverable,
          :rememberable, :trackable, :validatable
 
   before_validation :set_alias
@@ -13,8 +14,8 @@ class User < ActiveRecord::Base
   has_many :blogs, foreign_key: :user_id, primary_key: :id, dependent: :destroy
   has_many :posts, foreign_key: :user_id, dependent: :destroy
 
-  def personal_uri
-    blogs.first&.uri
+  def to_param
+    uri
   end
 
   protected

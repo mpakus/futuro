@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class Post::Publish
   include ApplicationHelper
 
@@ -14,11 +15,11 @@ class Post::Publish
 
   def fetch_content
     content_cut = render_block(@post.list_of_blocks.first)
-    content = ''
+    content = []
     @post.list_of_blocks.each do |block|
       content << render_block(block)
     end
-    [content, content_cut]
+    [content.join, content_cut]
   end
 
   def render_block(block)

@@ -5,3 +5,5 @@ en:
   futuro:
     title: Futuro
     description: 'Modern social content platform. <a href="/futuro/about/">Look at the features.</a>'
+  btn:
+    save: Save

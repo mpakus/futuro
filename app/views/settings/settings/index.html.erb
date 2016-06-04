@@ -1,0 +1,32 @@
+<h1><i class="fa fa-cog"></i> <%= t('settings.title') %></h1>
+
+<% if current_user.blogs.any?  %>
+  <h3><%= t('settings.blog.list') %></h3>
+  <ul>
+    <% current_user.blogs.find_each do |blog| %>
+      <li><%= link_to blog.name, blog %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<h3><%= t('settings.blog.create') %></h3>
+<%= form_for @blog, url: settings_path do |f| %>
+  <%= form_errors(@blog, false) %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, autofocus: true, class: 'form-control', required: 'required', autocomplete: 'off', 'max-length': 255 %>
+  </div>
+  <div class="form-group">
+    <div class="input-group">
+      <span class="input-group-addon">http://futuro.co/</span>
+      <%= f.text_field :uri, class: 'form-control', required: 'required', autocomplete: 'off', 'max-length': 255 %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :description %>
+    <%= f.text_area :description, class: 'form-control', autocomplete: 'off', rows: 5 %>
+  </div>
+  <div class="form-group">
+    <%= f.submit t('settings.blog.create'), class: 'btn btn-default' %>
+  </div>
+<% end  %>

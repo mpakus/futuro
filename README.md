@@ -6,6 +6,9 @@ Futuro - social publishing platform
 Versions:
 ---------
 
+0.5
+- settings page (create new blog, list of user blogs)
+
 0.4
 - text block like Medium editor
 

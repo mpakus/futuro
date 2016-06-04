@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 module ApplicationHelper
-  def form_errors(form)
+  def form_errors(form, show_field = true)
     html = []
     if form && form.errors.any?
       html << '<div class="alert-danger alert"><a class="close" data-dismiss="alert">&times;</a><ul>'
       form.errors.each do |field, msg|
-        html << %(<li>#{field} #{msg}</li>)
+        html << %(<li>#{show_field ? field : ''} #{msg}</li>)
       end
       html << '</ul></div>'
     end

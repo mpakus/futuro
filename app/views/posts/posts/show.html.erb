@@ -5,11 +5,8 @@
 <main class="container">
   <div class="row">
     <div class="col-xs-12 col-md-8 single-content-sidebar">
-
       <h1><%= @post.title %></h1>
-
       <%= @post.content.html_safe %>
-
     </div>
 
     <div class="col-xs-12 col-md-3 col-md-offset-1 single-content-sidebar-area">
@@ -17,15 +14,14 @@
       <%= image_tag 'profile-1.jpg', class: 'user-icon', alt: @post.author_name %>
 
       <div class="meta">
-
         <div class="sidebar-info">
-          <a href="category.html"><%= @post.author_name %></a> in <a href="category.html"><%= @post.blog_name %></a>
+          <%= link_to @post.author do %>
+            <%= @post.author_name %></a> in <%= link_to @post.blog_name, @post.blog %>
+          <% end %>
         </div>
-
         <div class="sidebar-readtime">
-          <i class="fa fa-bookmark"></i>
+          <i class="fa fa-bookmark-o"></i>
         </div>
-
       </div>
 
       <h2 class="favorites">Similar Categories</h2>
@@ -84,35 +80,34 @@
 
       <div class="col-xs-12 col-sm-6">
         <div class="category-list">
-          <p>Published <span>14th May 2015</span></p>
-          <p><a href="#"><%= @post.author_name %></a> in <a href="#"><%= @post.blog_name %></a></p>
+          <p>Published <span><%= l @post.created_at, format: :short %></span></p>
+          <p><%= link_to @post.author_name, @post.author %> in <%= link_to @post.blog_name, @post.blog %></p>
 
+<!--
           <div class="other-catergories">
             <h3>Also found in</h3>
-
             <ul>
               <li><a href="#">Stories</a>,</li>
               <li><a href="#">Life</a>,</li>
               <li><a href="#">Adventures</a></li>
             </ul>
           </div>
+-->
 
         </div>
-      </div><!-- end col -->
+      </div>
 
       <div class="col-xs-12 col-sm-4">
         <div class="social">
           <p>Share this article</a>
           <div class="social-links">
             <a class="social-icon" href="#" data-platform="twitter" data-message="Message about this post" data-url="http://writertheme.com/post"><i class="fa fa-twitter"></i></a>
-
             <a class="social-icon" href="#" data-platform="facebook" data-message="Message about this post" data-url="http://writertheme.com/post"><i class="fa fa-facebook-official"></i></a>
-
             <a class="social-icon" data-platform="mail"  href="mailto:support@writertheme.com"><i class="fa fa-envelope"></i></a>
           </div>
         </div>
       </div>
 
-    </div><!-- end row -->
+    </div>
   </div>
 </footer>

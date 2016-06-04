@@ -1,15 +1,14 @@
 # frozen_string_literal: true
 Rails.application.routes.draw do
-  devise_for :users, controllers: {
-    registrations: 'users/registrations'
-  }
+  devise_for :users, controllers: { registrations: 'users/registrations' }
 
   root 'posts/posts#index'
 
-  get '@:user_uri' => 'posts#user', as: :show_user
+  get '@:user' => 'posts#user', as: :user
+  resources :settings, controller: 'settings/settings', only: [:index, :create]
 
   # /home-page
-  get ':blog' => 'posts/blogs#index', as: :blog_posts, defaults: { format: 'html' }
+  get ':blog' => 'posts/blogs#index', as: :blog, defaults: { format: 'html' }
   # /home-page/100-title.html
   get ':blog/:id(:format)' => 'posts/posts#show', as: :show_post
   namespace :futuro do

@@ -24,6 +24,8 @@ en:
               confirmation: Passwords doesn't match
             agreement:
               accepted: Agreement should be accepted
+            uri:
+              taken: already taken
     attributes:
       user:
-        personal_uri: Personal Blog
+        uri: User name
