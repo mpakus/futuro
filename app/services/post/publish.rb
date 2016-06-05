@@ -16,13 +16,15 @@ class Post::Publish
   def fetch_content
     content_cut = render_block(@post.list_of_blocks.first)
     content = []
-    @post.list_of_blocks.each do |block|
+    @post.list_of_blocks.find_each do |block|
+      next unless block
       content << render_block(block)
     end
     [content.join, content_cut]
   end
 
   def render_block(block)
+    return '' if block.blank?
     clean_text view.render(post_block_template(block, 'show'), block: block)
   end
 
