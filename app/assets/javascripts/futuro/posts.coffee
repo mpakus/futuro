@@ -21,8 +21,7 @@ class @Posts
     $('.js_post_header_image_uploader').fileupload
       method:   'PATCH'
       dataType: 'json'
-      done: (e, data)->
-#        $(div).html("""<img src="#{data.result.image.mini.url}" alt="" />""")
+#      done: (e, data)->
       progressall: (e, data)->
         progress = parseInt(data.loaded / data.total * 100, 10)
         NProgress.set(progress)
@@ -31,6 +30,7 @@ class @Posts
 
   init_post_blocks: ->
     @blocks_text = new PostsBlocksText
+    @blocks_album = new PostsBlocksAlbum
 
   init_post_events: ->
     $(document).on 'change', '#post_title', @save
