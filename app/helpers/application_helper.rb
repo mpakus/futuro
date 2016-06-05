@@ -30,7 +30,8 @@ module ApplicationHelper
     content_for :title, strip_tags(title)
   end
 
-  def post_block_template(block, tpl = 'form')
+  def post_block_template(block = nil, tpl = 'form')
+    return unless block
     klass = block.blockable.class.to_s.split('::').last.downcase
     "futuro/posts/blocks/#{klass}/#{tpl}"
   end

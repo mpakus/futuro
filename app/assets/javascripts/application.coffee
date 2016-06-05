@@ -1,7 +1,7 @@
 #= require jquery
+#= require bootstrap-sprockets
 #= require jquery.turbolinks
 #= require jquery_ujs
-#= require bootstrap-sprockets
 #= require nprogress
 #= require nprogress-turbolinks
 #= require_tree ./theme
@@ -32,5 +32,8 @@ class @Future
     @users = new Users
 
   always: ->
+    #  @TODO: try to fix Tooltip plugin
+#    $('[data-toggle="tooltip"]').tooltip()
+#    $('body').tooltip({ selector: '[data-toggle=tooltip]' })
 
 $(document).ready(Future.ready)

@@ -59,3 +59,23 @@
     @content;
   }
 }
+
+@mixin no-border{
+  border: none;
+  outline: none;
+  box-shadow: none;
+  border-left: 1px solid transparent;
+}
+@mixin no-border-focus{
+  outline: none;
+  box-shadow: none;
+  border-left: 1px solid $border-color;
+}
+
+@mixin boxed($size){
+  width: $size + px;
+  height: $size + px;
+  overflow: hidden;
+  @include line-height($size);
+  @include center-block();
+}

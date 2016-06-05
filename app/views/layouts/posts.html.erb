@@ -14,108 +14,110 @@
 </head>
 <body>
 
-<main class="container left-container">
-  <div class="row">
+  <%= render 'shared/post_create' %>
 
-    <section class="sidebar col-md-5 col-sm-12" style="background-image: <%= asset_url('default-sidebar.jpg') %>">
-      <%= render 'shared/logo' %>
-      <div class="site-info">
-        <div class="primary-info">
-          <h1><%= t('futuro.title') %></h1>
-          <p><%= t('futuro.description').html_safe %></p>
+  <main class="container left-container">
+    <div class="row">
+
+      <section class="sidebar col-md-5 col-sm-12" style="background-image: <%= asset_url('default-sidebar.jpg') %>">
+        <%= render 'shared/logo' %>
+        <div class="site-info">
+          <div class="primary-info">
+            <h1><%= t('futuro.title') %></h1>
+            <p><%= t('futuro.description').html_safe %></p>
+          </div>
+          <%= render 'shared/auth' %>
         </div>
-        <%= render 'shared/auth' %>
-      </div>
-    </section>
+      </section>
 
-    <section class="col-md-7 col-sm-12 col-md-offset-5 main-content">
+      <section class="col-md-7 col-sm-12 col-md-offset-5 main-content">
 
-      <!--
-            <div class="sub-nav">
-              <a href="#" class="select-posts active">Posts</a>
-              <a href="#" class="select-categories">Categories</a>
-            </div>
-      -->
-
-      <div class="home-page-posts animated fadeIn">
-        <%= yield %>
-      </div>
-      <!--
-            <div class="home-page-categories hide animated fadeIn">
-              <div class="category row">
-                <section>
-                  <div class="category-preview col-xs-6 col-sm-4 ">
-                    <h2>Easy Living</h2>
-                    <a href="category.html"><img src="img/cover-2.jpg" alt="category-image"></a>
-                  </div>
-
-                  <div class="category-preview col-xs-6 col-sm-4 ">
-                    <h2>Adventure</h2>
-                    <a href="category.html"><img src="img/cover-4.jpg" alt="category-image"></a>
-                  </div>
-
-                  <div class="category-preview col-xs-6 col-sm-4 ">
-                    <h2>Storytime</h2>
-                    <a href="category.html"><img src="img/cover-6.jpg" alt="category-image"></a>
-                  </div>
-
-                  <div class="category-preview col-xs-6 col-sm-4 ">
-                    <h2>Open Roads</h2>
-                    <a href="category.html"><img src="img/cover-9.jpg" alt="category-image"></a>
-                  </div>
-
-                  <div class="category-preview col-xs-6 col-sm-4 ">
-                    <h2>Gaming</h2>
-                    <a href="category.html"><img src="img/cover-1.jpg" alt="category-image"></a>
-                  </div>
-
-                  <div class="category-preview col-xs-6 col-sm-4 ">
-                    <h2>City Life</h2>
-                    <a href="category.html"><img src="img/cover-3.jpg" alt="category-image"></a>
-                  </div>
-
-                  <div class="category-preview col-xs-6 col-sm-4 ">
-                    <h2>Rave Culture</h2>
-                    <a href="category.html"><img src="img/cover-5.jpg" alt="category-image"></a>
-                  </div>
-
-                  <div class="category-preview col-xs-6 col-sm-4 ">
-                    <h2>Photography</h2>
-                    <a href="category.html"><img src="img/cover-7.jpg" alt="category-image"></a>
-                  </div>
-
-                  <div class="category-preview col-xs-6 col-sm-4 ">
-                    <h2>Animal Kingdom</h2>
-                    <a href="category.html"><img src="img/cover-8.jpg" alt="category-image"></a>
-                  </div>
-
-                  <div class="category-preview col-xs-6 col-sm-4 ">
-                    <h2>Beach</h2>
-                    <a href="category.html"><img src="img/cover-10.jpg" alt="category-image"></a>
-                  </div>
-
-                  <div class="category-preview col-xs-6 col-sm-4 ">
-                    <h2>Climbing</h2>
-                    <a href="category.html"><img src="img/cover-11.jpg" alt="category-image"></a>
-                  </div>
-
-                  <div class="category-preview col-xs-6 col-sm-4 ">
-                    <h2>Mystery</h2>
-                    <a href="category.html"><img src="img/cover-12.jpg" alt="category-image"></a>
-                  </div>
-
-                </section>
+        <!--
+              <div class="sub-nav">
+                <a href="#" class="select-posts active">Posts</a>
+                <a href="#" class="select-categories">Categories</a>
               </div>
-            </div>
-      -->
-      <%= render 'shared/footer' %>
-    </section><!-- main content -->
+        -->
 
-  </div>
+        <div class="home-page-posts animated fadeIn">
+          <%= yield %>
+        </div>
+        <!--
+              <div class="home-page-categories hide animated fadeIn">
+                <div class="category row">
+                  <section>
+                    <div class="category-preview col-xs-6 col-sm-4 ">
+                      <h2>Easy Living</h2>
+                      <a href="category.html"><img src="img/cover-2.jpg" alt="category-image"></a>
+                    </div>
 
-</main>
+                    <div class="category-preview col-xs-6 col-sm-4 ">
+                      <h2>Adventure</h2>
+                      <a href="category.html"><img src="img/cover-4.jpg" alt="category-image"></a>
+                    </div>
+
+                    <div class="category-preview col-xs-6 col-sm-4 ">
+                      <h2>Storytime</h2>
+                      <a href="category.html"><img src="img/cover-6.jpg" alt="category-image"></a>
+                    </div>
+
+                    <div class="category-preview col-xs-6 col-sm-4 ">
+                      <h2>Open Roads</h2>
+                      <a href="category.html"><img src="img/cover-9.jpg" alt="category-image"></a>
+                    </div>
+
+                    <div class="category-preview col-xs-6 col-sm-4 ">
+                      <h2>Gaming</h2>
+                      <a href="category.html"><img src="img/cover-1.jpg" alt="category-image"></a>
+                    </div>
+
+                    <div class="category-preview col-xs-6 col-sm-4 ">
+                      <h2>City Life</h2>
+                      <a href="category.html"><img src="img/cover-3.jpg" alt="category-image"></a>
+                    </div>
+
+                    <div class="category-preview col-xs-6 col-sm-4 ">
+                      <h2>Rave Culture</h2>
+                      <a href="category.html"><img src="img/cover-5.jpg" alt="category-image"></a>
+                    </div>
+
+                    <div class="category-preview col-xs-6 col-sm-4 ">
+                      <h2>Photography</h2>
+                      <a href="category.html"><img src="img/cover-7.jpg" alt="category-image"></a>
+                    </div>
+
+                    <div class="category-preview col-xs-6 col-sm-4 ">
+                      <h2>Animal Kingdom</h2>
+                      <a href="category.html"><img src="img/cover-8.jpg" alt="category-image"></a>
+                    </div>
+
+                    <div class="category-preview col-xs-6 col-sm-4 ">
+                      <h2>Beach</h2>
+                      <a href="category.html"><img src="img/cover-10.jpg" alt="category-image"></a>
+                    </div>
+
+                    <div class="category-preview col-xs-6 col-sm-4 ">
+                      <h2>Climbing</h2>
+                      <a href="category.html"><img src="img/cover-11.jpg" alt="category-image"></a>
+                    </div>
+
+                    <div class="category-preview col-xs-6 col-sm-4 ">
+                      <h2>Mystery</h2>
+                      <a href="category.html"><img src="img/cover-12.jpg" alt="category-image"></a>
+                    </div>
+
+                  </section>
+                </div>
+              </div>
+        -->
+        <%= render 'shared/footer' %>
+      </section>
+
+    </div>
+
+  </main>
 
 
-<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
 </html>

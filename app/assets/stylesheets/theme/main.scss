@@ -1,3 +1,5 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
 @import "vars";
 @import "mixins";
 @import "type";
@@ -18,9 +20,9 @@
 @import "partials/page-404";
 @import "nojs";
 // posts
-@import 'futuro/post-vars';
-@import 'futuro/post-form';
-@import 'futuro/post-blocks';
+@import 'futuro/post/form';
+@import 'futuro/post/blocks';
+@import 'futuro/post/controls';
 @import 'futuro/text';
 @import 'toastr';
 

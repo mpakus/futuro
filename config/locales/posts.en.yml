@@ -9,3 +9,5 @@ en:
         publish: Publish
     msg:
       saved: Saved...
+    tooltip:
+      create: Create new Post
