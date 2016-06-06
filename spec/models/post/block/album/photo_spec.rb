@@ -1,5 +1,5 @@
-require 'rails_helper'
+require_relative '../../../../../app/models/post/block/album'
+require_relative '../../../../../app/models/post/block/album/photo'
 
 RSpec.describe Post::Block::Album::Photo, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
 end

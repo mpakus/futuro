@@ -1,5 +1,7 @@
-require 'rails_helper'
+require_relative '../../../../app/models/post/block/album'
 
 RSpec.describe Post::Block::Album, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  context 'with kind' do
+    it { expect(Post::Block::Album.kinds.keys).to eq %w(grid slide).freeze }
+  end
 end

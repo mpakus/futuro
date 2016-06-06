@@ -13,6 +13,6 @@ RSpec.describe Post::Block, type: :model do
   end
 
   context 'with ::KINDS' do
-    it { expect(Post::Block::KINDS).to eq %w(text).freeze }
+    it { expect(Post::Block::KINDS).to eq %w(text album).freeze }
   end
 end
