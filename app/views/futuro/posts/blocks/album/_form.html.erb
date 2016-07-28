@@ -1,0 +1,14 @@
+<div class="post-album clearfix">
+  <div class="post-album-controls">
+    <%= form_for([:futuro, Post.new], remote: true, authenticity_token: true, multipart: true) do |f| %>
+      <span class="btn btn-primary btn-file">
+       <span class="glyphicon glyphicon-camera"></span>
+       <%= file_field_tag :image,  class: 'js_post_album_image_uploader', 'data-url': futuro_album_photos_path(album_id: block.blockable.id), multiple: true %>
+      </span>
+    <% end  %>
+  </div>
+
+  <div class="post-album-photos" id="post_album_photos<%= block.blockable.id %>">
+    <%= render partial: 'futuro/posts/blocks/album/photo', collection: block.blockable.photos, as: :photo %>
+  </div>
+</div>

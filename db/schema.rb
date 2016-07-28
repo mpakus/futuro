@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160522093421) do
+ActiveRecord::Schema.define(version: 20160605093620) do
 
   create_table "blogs", force: :cascade do |t|
     t.string   "name",        limit: 255
@@ -28,6 +28,21 @@ ActiveRecord::Schema.define(version: 20160522093421) do
 
   add_index "blogs", ["token"], name: "index_blogs_on_token", using: :btree
   add_index "blogs", ["uri"], name: "index_blogs_on_uri", using: :btree
+
+  create_table "post_block_album_photos", force: :cascade do |t|
+    t.string   "image",      limit: 255
+    t.integer  "album_id",   limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  add_index "post_block_album_photos", ["album_id"], name: "index_post_block_album_photos_on_album_id", using: :btree
+
+  create_table "post_block_albums", force: :cascade do |t|
+    t.integer  "kind",       limit: 1, default: 0
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+  end
 
   create_table "post_block_texts", force: :cascade do |t|
     t.text     "content",    limit: 4294967295

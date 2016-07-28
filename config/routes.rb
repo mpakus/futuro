@@ -16,6 +16,9 @@ Rails.application.routes.draw do
       resources :blocks, only: [:create], controller: 'posts/blocks'
       resources :publishes, only: [:create], controller: 'posts/publishes'
       resources :texts, only: [:update], controller: 'posts/blocks/texts'
+      resources :albums, only: [:create, :destroy], controller: 'posts/blocks/albums', shallow: true do
+        resources :photos, only: [:create, :destroy], controller: 'posts/blocks/albums/photos'
+      end
     end
   end
 end

@@ -54,11 +54,12 @@ end
 group :development do
   # gem 'web-console', '~> 2.0'
   gem 'better_errors'
-  gem 'meta_request'
-  gem 'sextant'
-  gem 'quiet_assets'
+  gem 'binding_of_caller'
   gem 'bullet'
   gem 'mailcatcher', require: false
+  gem 'meta_request'
+  gem 'quiet_assets'
+  gem 'sextant'
 end
 
 group :production do
