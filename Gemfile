@@ -26,7 +26,7 @@ gem 'mysql2', '~> 0.3.20'
 gem 'nprogress-rails' # progressbar for turbolinks
 gem 'paranoia', '~> 2.0' # soft delete functional for AR models
 gem 'puma'
-gem 'rails', '4.2.6'
+gem 'rails', '4.2.8'
 gem 'rails_config' # Keep configurations clean
 gem 'redactor-rails'
 gem 'russian'
