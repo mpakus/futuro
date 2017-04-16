@@ -9,6 +9,9 @@
 #= require turbolinks
 #= require jquery-fileupload/basic
 #= require medium-editor
+# require rails-ujs
+#= require js/scripts
+
 
 class @Future
   setup_ajax: ->

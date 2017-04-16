@@ -1,0 +1,29 @@
+section.space--xs.imageblock.switchable.feature-large
+  .imageblock__content.col-md-6.col-sm-4.pos-right
+    .background-image-holder
+      = image_tag 'img/landing-5.jpg'
+  .container
+    .row
+      .col-md-5.col-sm-7
+        h2
+          | Create an account
+        p.lead
+          | Get started with a 14 day free trial,
+          br.hidden-xs.hidden-sm
+          |  No credit card required.
+        = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { role: 'form', autocomplete: 'off' }) do |f|
+          .row
+            .col-xs-12
+              = f.text_field :name, autofocus: true, class: 'form-control', required: 'required', autocomplete: 'off', placeholder: 'Name'
+            .col-xs-12
+              = f.email_field :email, class: 'form-control', required: 'required', autocomplete: 'off', placeholder: 'Email Address'
+            .col-xs-12
+              = f.password_field :password, class: 'form-control', required: 'required', autocomplete: 'off', placeholder: 'Password'
+            .col-xs-12
+              button.btn.btn--primary.type--uppercase[type="submit"]
+                | Create Account
+            .col-xs-12
+              span.type--fine-print
+                | By signing up, you agree to the
+                a[href="#"]
+                  | Terms of Service
