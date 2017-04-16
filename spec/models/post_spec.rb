@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 RSpec.describe Post, type: :model do
   context 'with validation' do
     it 'check empty title' do

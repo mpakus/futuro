@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class Blog < ActiveRecord::Base
   include Tokenized
 
@@ -11,7 +12,7 @@ class Blog < ActiveRecord::Base
   belongs_to :owner, class_name: 'User', foreign_key: :user_id, required: true
   has_many :posts, dependent: :destroy
 
-  enum variant: %i(personal community)
+  enum variant: %i[personal community]
 
   def to_param
     uri
@@ -20,7 +21,7 @@ class Blog < ActiveRecord::Base
   private
 
   def set_uri_from_name
-    return if !uri.blank? || name.blank?
+    return if uri.present? || name.blank?
     self.uri = name.parameterize
   end
 

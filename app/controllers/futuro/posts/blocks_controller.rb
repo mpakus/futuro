@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class Futuro::Posts::BlocksController < Futuro::ApplicationController
   before_action :find_user_post, only: [:create]
 

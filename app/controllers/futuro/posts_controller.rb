@@ -1,6 +1,7 @@
 # frozen_string_literal: true
+
 class Futuro::PostsController < Futuro::ApplicationController
-  before_action :find_user_post, only: [:edit, :update, :destroy]
+  before_action :find_user_post, only: %i[edit update destroy]
 
   def create
     #   @todo: Post::CreateDraft.new(author: current_user).perform

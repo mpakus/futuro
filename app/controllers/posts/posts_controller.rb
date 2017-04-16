@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class Posts::PostsController < ApplicationController
   include Blogable
   include Postable
@@ -10,11 +11,11 @@ class Posts::PostsController < ApplicationController
   def index; end
 
   def show
-    @post = @blog.posts.find_by_token!(params[:id])
+    @post = @blog.posts.find_by!(token: params[:id])
   end
 
   def user
-    @user  = User.find_by_uri(params[:user_uri])
+    @user  = User.find_by(uri: params[:user_uri])
     @posts = @user.posts.page(params[:page]).per(10)
     render 'main/index'
   end

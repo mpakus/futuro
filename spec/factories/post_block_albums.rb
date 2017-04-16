@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require_dependency 'post/block/album'
 
 FactoryGirl.define do

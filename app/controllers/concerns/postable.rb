@@ -1,11 +1,12 @@
 # frozen_string_literal: true
+
 module Postable
   extend ActiveSupport::Concern
 
   private
 
   def find_user_post
-    @post = current_user.posts.find_by_token!(params[:id] || params[:post_id])
+    @post = current_user.posts.find_by!(token: params[:id] || params[:post_id])
   end
 
   def find_fresh_posts

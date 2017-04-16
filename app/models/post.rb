@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class Post < ActiveRecord::Base
   include Tokenized
 
@@ -20,7 +21,7 @@ class Post < ActiveRecord::Base
   scope :by_author, ->(user) { where(author: user) }
   scope :newests, -> { order(created_at: :desc) }
 
-  enum access: [:for_everyone, :only_followers, :only_friends, :only_me]
+  enum access: %i[for_everyone only_followers only_friends only_me]
 
   def blocks
     list_of_blocks.collect(&:blockable)
@@ -33,7 +34,7 @@ class Post < ActiveRecord::Base
   private
 
   def set_content_cut
-    return if !content_cut.blank? || content.blank?
+    return if content_cut.present? || content.blank?
     self.content_cut = content.truncate(150)
   end
 end

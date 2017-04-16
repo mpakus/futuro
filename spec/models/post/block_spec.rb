@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 RSpec.describe Post::Block, type: :model do
   context 'with order' do
     before do
@@ -13,6 +14,6 @@ RSpec.describe Post::Block, type: :model do
   end
 
   context 'with ::KINDS' do
-    it { expect(Post::Block::KINDS).to eq %w(text album).freeze }
+    it { expect(Post::Block::KINDS).to eq %w[text album].freeze }
   end
 end

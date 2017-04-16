@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class Futuro::Posts::Blocks::Albums::PhotosController < Futuro::Posts::Blocks::ApplicationController
   def create
     find_album

@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 RSpec.describe Blog, type: :model do
   it 'check empty name' do
     blog = FactoryGirl.build(:blog, name: nil)

@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 RSpec.describe Post::CreateBlock do
   let(:post) { FactoryGirl.create(:post) }
 

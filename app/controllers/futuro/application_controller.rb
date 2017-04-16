@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class Futuro::ApplicationController < ActionController::Base
   include Postable
   protect_from_forgery with: :exception

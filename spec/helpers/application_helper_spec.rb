@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class Block
   def blockable
     Block::Text.new

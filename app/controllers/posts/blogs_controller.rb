@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class Posts::BlogsController < ApplicationController
   include Blogable
   include Postable

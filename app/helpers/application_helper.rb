@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module ApplicationHelper
   def form_errors(form, show_field = true)
     html = []
@@ -39,8 +40,8 @@ module ApplicationHelper
   def clean_text(text)
     return '' if text.blank?
     scrubber = Rails::Html::PermitScrubber.new
-    scrubber.tags = %w(p b h1 h2 h3 h4 h5 h6 li ul ol small big strong u i img blockquote cite pre span a div table tr td th br)
-    scrubber.attributes = %w(href src style class)
+    scrubber.tags = %w[p b h1 h2 h3 h4 h5 h6 li ul ol small big strong u i img blockquote cite pre span a div table tr td th br]
+    scrubber.attributes = %w[href src style class]
     html_fragment = Loofah.fragment(text)
     html_fragment.scrub!(scrubber)
     html_fragment.to_s.html_safe

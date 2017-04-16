@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class PostHeaderUploader < ApplicationUploader
   # Process files as they are uploaded:
   # process :scale => [200, 300]

@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class User < ActiveRecord::Base
   has_secure_token
 
@@ -21,7 +22,7 @@ class User < ActiveRecord::Base
   protected
 
   def set_alias
-    self.uri = name.parameterize if uri.blank? && !name.blank?
+    self.uri = name.parameterize if uri.blank? && name.present?
   end
 end
 

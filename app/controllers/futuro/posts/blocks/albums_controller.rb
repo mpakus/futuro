@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class Futuro::Posts::Blocks::AlbumsController < Futuro::Posts::Blocks::ApplicationController
   def update
     find_text

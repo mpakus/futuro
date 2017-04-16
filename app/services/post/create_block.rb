@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class Post::CreateBlock
   def initialize(post, block)
     @post = post
