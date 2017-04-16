@@ -1,5 +1,6 @@
 # frozen_string_literal: true
-class CreatePostBlocks < ActiveRecord::Migration
+
+class CreatePostBlocks < ActiveRecord::Migration[5.1]
   def change
     create_table :post_blocks do |t|
       t.references :post, index: true, foreign_key: true

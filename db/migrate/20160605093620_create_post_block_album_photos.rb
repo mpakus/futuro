@@ -1,4 +1,6 @@
-class CreatePostBlockAlbumPhotos < ActiveRecord::Migration
+# frozen_string_literal: true
+
+class CreatePostBlockAlbumPhotos < ActiveRecord::Migration[5.1]
   def change
     create_table :post_block_album_photos do |t|
       t.string :image

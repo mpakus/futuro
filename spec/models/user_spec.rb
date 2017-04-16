@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-
 RSpec.describe User, type: :model do
   context 'with validation' do
     it 'check empty name' do
@@ -15,7 +14,7 @@ RSpec.describe User, type: :model do
     end
 
     it 'check uniq uri' do
-      attrs = FactoryGirl.attributes_for(:user, uri: 'hell-of-wheels')
+      attrs = FactoryGirl.attributes_for(:user, uri: 'hell-on-wheels')
       User.create(attrs)
       user = User.new(attrs)
       user.valid?

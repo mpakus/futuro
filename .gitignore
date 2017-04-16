@@ -9,8 +9,14 @@
 
 # Ignore all logfiles and tempfiles.
 /log/*
+/tmp/*
 !/log/.keep
-/tmp
+!/tmp/.keep
+
+/node_modules
+/yarn-error.log
+
+.byebug_history
 .idea/
 .idea/*
 /public/uploads
@@ -21,3 +27,4 @@ workspace.xml
 
 future.iml
 /coverage
+tmp

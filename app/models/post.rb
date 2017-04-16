@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Post < ActiveRecord::Base
+class Post < ApplicationRecord
   include Tokenized
 
   before_create :set_content_cut
@@ -11,12 +11,11 @@ class Post < ActiveRecord::Base
   validates :title, presence: true, length: { maximum: 255 }
 
   belongs_to :blog, required: true
-  delegate :uri, :name, to: :blog, allow_nil: true, prefix: true
-
   belongs_to :author, class_name: 'User', foreign_key: :user_id, required: true
-  delegate :uri, :name, to: :author, allow_nil: true, prefix: true
-
   has_many :list_of_blocks, -> { order(position: :asc) }, class_name: 'Post::Block'
+
+  delegate :uri, :name, to: :blog, allow_nil: true, prefix: true
+  delegate :uri, :name, to: :author, allow_nil: true, prefix: true
 
   scope :by_author, ->(user) { where(author: user) }
   scope :newests, -> { order(created_at: :desc) }
@@ -57,6 +56,8 @@ end
 #
 # Indexes
 #
-#  index_posts_on_access  (access)
-#  index_posts_on_token   (token)
+#  index_posts_on_access   (access)
+#  index_posts_on_blog_id  (blog_id)
+#  index_posts_on_token    (token)
+#  index_posts_on_user_id  (user_id)
 #

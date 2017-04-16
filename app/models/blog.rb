@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Blog < ActiveRecord::Base
+class Blog < ApplicationRecord
   include Tokenized
 
   before_validation :set_uri_from_name
@@ -49,6 +49,7 @@ end
 #
 # Indexes
 #
-#  index_blogs_on_token  (token)
-#  index_blogs_on_uri    (uri)
+#  index_blogs_on_token    (token)
+#  index_blogs_on_uri      (uri)
+#  index_blogs_on_user_id  (user_id)
 #

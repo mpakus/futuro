@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 User.destroy_all
 u = User.create(email: 'user@futuro-blog.com',
                 password: 'password',
@@ -20,3 +21,5 @@ Post.destroy_all
     author: u
   )
 end
+
+puts 'well done...'

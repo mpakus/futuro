@@ -3,19 +3,19 @@
 }
 
 .post-create{
-  @include boxed(35);
+  //@include boxed(35);
   padding: 10px;
   position: absolute;
   top: 15px;
   right: 15px;
   text-align: center;
   span{
-    @include font-size(15);
-    @include boxed(15);
-    color: $main-color;
+    //@include font-size(15);
+    //@include boxed(15);
+    //color: $main-color;
   }
   &:hover{
     border: none;
-    color: $gray-base;
+    //color: $gray-base;
   }
 }

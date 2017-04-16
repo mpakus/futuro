@@ -1,7 +1,7 @@
 #post_form_panel{
   height: 120px;
   width: 100%;
-  border-bottom: 2px solid $border-color;
+  //border-bottom: 2px solid $border-color;
   display: block;
   overflow: hidden;
   //@include breakpoint(sm) {
@@ -16,12 +16,12 @@
 
   .post-form{
 
-    .form-control{
-      @include no-border;
-    }
-    .form-control:focus{
-      @include no-border-focus;
-    }
+    //.form-control{
+    //  @include no-border;
+    //}
+    //.form-control:focus{
+    //  @include no-border-focus;
+    //}
 
     .btn-file {
       position: relative;
@@ -50,7 +50,7 @@
     height: 85px;
 
     .post-title{
-      @include font-size(24);
+      //@include font-size(24);
       height: 34px;
     }
   }
