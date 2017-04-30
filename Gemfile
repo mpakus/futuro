@@ -21,10 +21,9 @@ gem 'autoprefixer-rails' # css prefixer
 gem 'bootstrap-sass', '~> 3.3.4'
 gem 'carrierwave' # file upload
 gem 'codeclimate-test-reporter', group: :test, require: nil
-gem 'coffee-rails', '~> 4.2'
-gem 'devise'
+gem 'coffee-rails'
+gem 'devise', github: 'plataformatec/devise', branch: :master
 gem 'devise-bootstrap-views'
-gem 'font-awesome-rails'
 gem 'has_secure_token'
 gem 'jquery-fileupload-rails'
 gem 'jquery-rails'
@@ -34,15 +33,15 @@ gem 'little_decorator' # decorator for models
 gem 'local_time' # for human readable time
 gem 'medium-editor-rails' # visual editor
 gem 'mini_magick' # image processing
-gem 'mysql2', '>= 0.3.18', '< 0.5'
+gem 'mysql2', '~> 0.4.6'
 gem 'nprogress-rails' # progressbar for turbolinks
-gem 'paranoia', '~> 2.0' # soft delete functional for AR models
+gem 'paranoia', '~> 2.2' # soft delete functional for AR models
 gem 'puma', '~> 3.7'
-gem 'rails', '~> 5.1.0.rc1', git: 'https://github.com/rails/rails', branch: '5-1-stable'
+gem 'rails', '~> 5.1'
 gem 'rails_config' # Keep configurations clean
 gem 'russian'
-gem 'sass-rails', github: 'rails/sass-rails'
-gem 'slim-rails'
+gem 'sass-rails'
+gem 'slim-rails', github: 'slim-template/slim-rails', branch: :master
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 
@@ -66,7 +65,6 @@ group :development do
   gem 'binding_of_caller'
   gem 'bullet'
   gem 'listen', '>= 3.0.5', '< 3.2'
-  gem 'mailcatcher', require: false
   gem 'sextant'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
