@@ -1,24 +1,11 @@
-# README
+# Futuro - blogging community
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Realization of the BMF's Concept (blogging management framework) where is
+each part of information it's just an one simple block of data and you can 
+mix these blocks, sort and use them as you wish.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+v.0.1beta
+- Authenticate
+- Create a Post
+- Add a Text block
+- Sort of blocks
