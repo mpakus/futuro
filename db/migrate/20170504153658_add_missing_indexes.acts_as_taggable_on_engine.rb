@@ -7,7 +7,7 @@ class AddMissingIndexes < ActiveRecord::Migration[5.1]
     add_index :taggings, :tagger_id
     add_index :taggings, :context
 
-    add_index :taggings, [:tagger_id, :tagger_type]
-    add_index :taggings, [:taggable_id, :taggable_type, :tagger_id, :context], name: 'taggings_idy'
+    add_index :taggings, %i[tagger_id tagger_type]
+    add_index :taggings, %i[taggable_id taggable_type tagger_id context], name: 'taggings_idy'
   end
 end
