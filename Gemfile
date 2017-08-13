@@ -7,13 +7,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-# gem 'redis', '~> 3.0'
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
-gem 'aasm' # state machine
+gem 'aasm'
 gem 'acts-as-taggable-on', git: 'https://github.com/F3pix/acts-as-taggable-on' # tags
 gem 'acts_as_list' # order post::blocks
 gem 'annotate' # annotate models
@@ -53,15 +47,18 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'factory_girl_rails'
   gem 'faker'
+  gem 'fasterer', require: false
   gem 'launchy'
+  gem 'reek', require: false
   gem 'rspec-rails'
   gem 'rubocop', require: false
+  gem 'rubocop-rspec', require: false
   gem 'selenium-webdriver'
 end
 
 group :development do
   gem 'web-console', '>= 3.3.0'
-  # gem 'better_errors'
+  gem 'better_errors'
   gem 'binding_of_caller'
   gem 'bullet'
   gem 'listen', '>= 3.0.5', '< 3.2'

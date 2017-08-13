@@ -1,0 +1,18 @@
+Metrics/LineLength:
+  Max: 120
+Metrics/BlockLength:
+  ExcludedMethods: ['describe', 'context']
+Documentation:
+    Enabled: false
+AllCops:
+  TargetRubyVersion: 2.3
+  Exclude:
+    - lib/tasks/**/*
+    - db/**/*
+    - config/**/*
+    - spec/**/*
+    - app/services/exchanger/**/*
+    - app/admin/**/*
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
+require: rubocop-rspec
