@@ -1,0 +1,198 @@
+| <!doctype html>
+html[lang="en"]
+  head
+    meta[charset="utf-8"]
+    title
+    meta[name="viewport" content="width=device-width, initial-scale=1.0"]
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    javascript:
+      |
+      window.authenticity_token = '<%= form_authenticity_token %>';
+    link[href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet"]
+    link[href="https://fonts.googleapis.com/css?family=Raleway:300,400,500" rel="stylesheet" type="text/css"]
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+  body.scroll-assist[data-smooth-scroll-offset="77"]
+    .nav-container
+      div
+        .bar.bar--sm.visible-xs
+          .container
+            .row
+              .col-xs-3.col-sm-2
+                a[href="index.html"]
+                  img.logo.logo-dark[alt="logo" src="img/logo-dark.png"]
+                  img.logo.logo-light[alt="logo" src="img/logo-light.png"]
+              .col-xs-9.col-sm-10.text-right
+                a.hamburger-toggle[href="#" data-toggle-class="#menu1;hidden-xs hidden-sm"]
+                  i.icon.icon--sm.stack-interface.stack-menu
+        nav#menu1.bar.bar-1.hidden-xs
+          .container
+            .row
+              .col-md-1.col-sm-2.hidden-xs
+                .bar__module
+                  a[href="index.html"]
+                    img.logo.logo-dark[alt="logo" src="img/logo-dark.png"]
+                    img.logo.logo-light[alt="logo" src="img/logo-light.png"]
+              .col-md-11.col-sm-12.text-right.text-left-xs.text-left-sm
+                .bar__module
+                  ul.menu-horizontal.text-left
+                    li
+                      a[href="#"]
+                        |  Single Link
+                    li.dropdown
+                      span.dropdown__trigger
+                        |  Dropdown Slim
+                      .dropdown__container
+                        .container
+                          .row
+                            .dropdown__content.col-md-2
+                              ul.menu-vertical
+                                li
+                                  a[href="#"]
+                                    | Single Link
+                    li.dropdown
+                      span.dropdown__trigger
+                        |  Dropdown Wide
+                      .dropdown__container
+                        .container
+                          .row
+                            .dropdown__content.col-md-12
+                              .col-md-3
+                                h5
+                                  | Menu Title
+                                ul.menu-vertical
+                                  li
+                                    a[href="#"]
+                                      | Single Link
+                              .col-md-3
+                                h5
+                                  | Menu Title
+                                ul.menu-vertical
+                                  li
+                                    a[href="#"]
+                                      | Single Link
+                              .col-md-3
+                                h5
+                                  | Menu Title
+                                ul.menu-vertical
+                                  li
+                                    a[href="#"]
+                                      | Single Link
+                              .col-md-3
+                                h5
+                                  | Menu Title
+                                ul.menu-vertical
+                                  li
+                                    a[href="#"]
+                                      | Single Link
+                .bar__module
+                  a.btn.btn--sm.type--uppercase[href="#customise-template"]
+                    span.btn__text
+                      |  Try Builder
+                  a.btn.btn--sm.btn--primary.type--uppercase[href="#purchase-template"]
+                    span.btn__text
+                      |  Buy Now
+    .main-container
+      = yield
+      footer.space--sm.footer-2
+        .container
+          .row
+            .col-sm-6.col-md-3.col-xs-6
+              h6.type--uppercase
+                | Company
+              ul.list--hover
+                li
+                  a[href="#"]
+                    | About Company
+                li
+                  a[href="#"]
+                    | Our Team
+                li
+                  a[href="#"]
+                    | Locations
+                li
+                  a[href="#"]
+                    | History
+                li
+                  a[href="#"]
+                    | Work With Us
+            .col-sm-6.col-md-3.col-xs-6
+              h6.type--uppercase
+                | Developers
+              ul.list--hover
+                li
+                  a[href="#"]
+                    | Developer Center
+                li
+                  a[href="#"]
+                    | API Reference
+                li
+                  a[href="#"]
+                    | Downloads
+                li
+                  a[href="#"]
+                    | Tools
+                li
+                  a[href="#"]
+                    | Developer Blog
+                li
+                  a[href="#"]
+                    | Developer Forums
+            .col-sm-6.col-md-3.col-xs-6
+              h6.type--uppercase
+                | Support
+              ul.list--hover
+                li
+                  a[href="#"]
+                    | Help Center
+                li
+                  a[href="#"]
+                    | Live Chat
+                li
+                  a[href="#"]
+                    | Downloads
+                li
+                  a[href="#"]
+                    | Press Kit
+            .col-sm-6.col-md-3.col-xs-6
+              h6.type--uppercase
+                | Locations
+              ul.list--hover
+                li
+                  a[href="#"]
+                    | Melbourne
+                li
+                  a[href="#"]
+                    | London
+                li
+                  a[href="#"]
+                    | New York
+                li
+                  a[href="#"]
+                    | San Francisco
+          .row
+            .col-sm-6
+              a.type--fine-print[href="#"]
+                | Privacy Policy
+              a.type--fine-print[href="#"]
+                | Legal
+            .col-sm-6.text-right.text-left-xs
+              ul.social-list.list-inline.list--hover
+                li
+                  a[href="#"]
+                    i.socicon.socicon-google.icon.icon--xs
+                li
+                  a[href="#"]
+                    i.socicon.socicon-twitter.icon.icon--xs
+                li
+                  a[href="#"]
+                    i.socicon.socicon-facebook.icon.icon--xs
+                li
+                  a[href="#"]
+                    i.socicon.socicon-instagram.icon.icon--xs
+
+    /script[src="js/jquery-3.1.1.min.js"]
+    /script[src="js/parallax.js"]
+    /script[src="js/countdown.min.js"]
+    /script[src="js/smooth-scroll.min.js"]
+    /script[src="js/scripts.js"]
