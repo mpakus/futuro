@@ -57,7 +57,6 @@ group :development, :test do
 end
 
 group :development do
-  gem 'web-console', '>= 3.3.0'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'bullet'
@@ -65,4 +64,5 @@ group :development do
   gem 'sextant'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'web-console', '>= 3.3.0'
 end
