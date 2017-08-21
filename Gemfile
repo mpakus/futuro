@@ -47,9 +47,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'factory_girl_rails'
   gem 'faker'
-  gem 'fasterer', require: false
   gem 'launchy'
-  gem 'reek', require: false
   gem 'rspec-rails'
   gem 'rubocop', require: false
   gem 'rubocop-rspec', require: false
@@ -60,7 +58,9 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'bullet'
+  gem 'fasterer', require: false
   gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'reek', require: false
   gem 'sextant'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
