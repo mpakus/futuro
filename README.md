@@ -1,10 +1,15 @@
 # Futuro - blogging community
 
-Realization of the BMF's Concept (blogging management framework) where is
-each part of information it's just an one simple block of data and you can 
-mix these blocks, sort and use them as you wish.
+Service:
+- multiusers
+- multiblogs (user can have many blogs)
+- blog's post can have many block types (text, photo album, map, video, mp3, chart)
+- publishing (pdf, epub)
+- export (xml or json in the zip)
+- subscription (monthly, annually, crypto payments: btc, ltc, eth)
+- api (jwt)
 
-v.0.1beta
+v.0.1 beta
 - Authenticate
 - Create a Post
 - Add a Text block
