@@ -17,13 +17,13 @@ RSpec.describe Post, type: :model do
     it 'check empty blog' do
       post = FactoryGirl.build(:post, blog: nil)
       post.valid?
-      expect(post.errors[:blog]).to include "can't be blank"
+      expect(post.errors[:blog]).to include 'must exist'
     end
 
     it 'check empty author' do
       post = FactoryGirl.build(:post, author: nil)
       post.valid?
-      expect(post.errors[:author]).to include "can't be blank"
+      expect(post.errors[:author]).to include 'must exist'
     end
   end
 
